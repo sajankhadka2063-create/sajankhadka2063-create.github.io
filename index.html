@@ -1,0 +1,887 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Sajan Khadka is an aspiring full-stack developer from Nepal, exploring web development, AI, educational technology and productivity tools.">
+  <meta name="theme-color" content="#080d1b">
+
+  <title>Sajan Khadka | Aspiring Full-Stack Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JavaScript loads after HTML -->
+  <script src="translations.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- Scroll Progress Indicator -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Interactive Spider Web Particle Background -->
+<canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="header" id="header">
+    <nav class="navbar container" aria-label="Main navigation">
+
+      <a href="#home" class="logo" aria-label="Sajan Khadka Home">
+        Sajan<span class="accent">Khadka</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link active" href="#home" data-i18n="navHome">Home</a></li>
+        <li><a class="nav-link" href="#about" data-i18n="navAbout">About</a></li>
+        <li><a class="nav-link" href="#skills" data-i18n="navSkills">Skills</a></li>
+        <li><a class="nav-link" href="#projects" data-i18n="navProjects">Projects</a></li>
+        <li><a class="nav-link" href="#education" data-i18n="navEducation">Education</a></li>
+        <li><a class="nav-link" href="#services" data-i18n="navServices">Services</a></li>
+        <li><a class="nav-link" href="#contact" data-i18n="navContact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button
+          class="language-btn"
+          id="languageToggle"
+          type="button"
+          aria-label="Switch language"
+        >
+          <i class="fa-solid fa-globe"></i>
+          <span id="languageLabel">नेपाली</span>
+        </button>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-controls="navLinks"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+
+      <div class="hero-background"></div>
+
+      <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+
+          <div class="availability-badge">
+            <span class="status-dot"></span>
+            <span data-i18n="heroBadge">Learning & Building</span>
+          </div>
+
+          <p class="hero-greeting" data-i18n="heroGreeting">
+            Hello, I'm
+          </p>
+
+          <h1 class="hero-name">
+            Sajan <span>Khadka</span>
+          </h1>
+
+          <h2 class="hero-title">
+            <span id="typingText"></span>
+            <span class="typing-cursor">|</span>
+          </h2>
+
+          <p class="hero-description" data-i18n="heroDescription">
+            An aspiring Full-Stack Developer from Nepal,
+            passionate about building useful digital solutions
+            through technology, creativity and problem-solving.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#projects" class="btn btn-primary">
+              <span data-i18n="viewProjects">Explore Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+              <span data-i18n="contactMe">Contact Me</span>
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+
+          </div>
+
+          <div class="hero-socials">
+            <span data-i18n="connectWithMe">Connect with me</span>
+
+            <a
+              href="mailto:sajankhadka2063@gmail.com"
+              aria-label="Send email"
+              title="Email"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+
+          <div class="hero-location">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Lalitpur, Nepal</span>
+          </div>
+
+        </div>
+
+        <div class="hero-visual reveal">
+
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+
+          <div class="profile-frame">
+
+            <img
+              id="profilePhoto"
+              src="assets/images/sajan.png.png"
+              alt="Portrait of Sajan Khadka"
+              class="profile-photo"
+            >
+
+            <div class="profile-fallback" id="profileFallback" hidden>
+              <i class="fa-solid fa-user-astronaut"></i>
+              <span>SK</span>
+            </div>
+
+          </div>
+
+          <div class="floating-card code-card">
+            <i class="fa-solid fa-code"></i>
+            <span>HTML • CSS • JS</span>
+          </div>
+
+          <div class="floating-card location-card">
+            <i class="fa-solid fa-laptop-code"></i>
+            <span data-i18n="floatingText">Future Developer</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <a href="#about" class="scroll-indicator">
+        <span data-i18n="scrollDown">Scroll to explore</span>
+        <i class="fa-solid fa-arrow-down"></i>
+      </a>
+
+    </section>
+
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about-section" id="about">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="section-label" data-i18n="aboutLabel">01 / INTRODUCTION</span>
+          <h2 data-i18n="aboutHeading">About <span>Me</span></h2>
+          <p data-i18n="aboutSubtitle">
+            A learner, creator and future developer.
+          </p>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-content reveal">
+
+            <h3 data-i18n="aboutTitle">
+              Turning curiosity into real-world skills.
+            </h3>
+
+            <p data-i18n="aboutParagraph1">
+              I'm Sajan Khadka, an aspiring Full-Stack Developer
+              from Nepal with a passion for technology,
+              problem-solving and building useful digital solutions.
+            </p>
+
+            <p data-i18n="aboutParagraph2">
+              I am currently learning web development while
+              preparing for competitive examinations such as
+              Lok Sewa. I develop my technical skills through
+              hands-on projects and continuous practice.
+            </p>
+
+            <p data-i18n="aboutParagraph3">
+              My interests include AI-powered applications,
+              educational technology and productivity tools.
+              I believe in consistency, discipline and lifelong learning.
+            </p>
+
+            <div class="about-info">
+
+              <div>
+                <span data-i18n="infoName">Name</span>
+                <strong>Sajan Khadka</strong>
+              </div>
+
+              <div>
+                <span data-i18n="infoLocation">Location</span>
+                <strong>Lalitpur, Nepal</strong>
+              </div>
+
+              <div>
+                <span data-i18n="infoFocus">Current Focus</span>
+                <strong>HTML, CSS, JavaScript</strong>
+              </div>
+
+              <div>
+                <span data-i18n="infoGoal">Career Goal</span>
+                <strong data-i18n="infoGoalValue">Full-Stack Developer</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="about-cards reveal">
+
+            <article class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <h3 data-i18n="interestAI">AI & Technology</h3>
+              <p data-i18n="interestAIDesc">
+                Exploring intelligent applications and modern technologies.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-book-open-reader"></i>
+              </div>
+              <h3 data-i18n="interestEdtech">Educational Technology</h3>
+              <p data-i18n="interestEdtechDesc">
+                Interested in tools that make learning more accessible.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h3 data-i18n="interestProductivity">Productivity</h3>
+              <p data-i18n="interestProductivityDesc">
+                Creating ideas for better organization and personal growth.
+              </p>
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section skills-section" id="skills">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="section-label" data-i18n="skillsLabel">02 / TECHNOLOGIES</span>
+          <h2 data-i18n="skillsHeading">Technical <span>Skills</span></h2>
+          <p data-i18n="skillsSubtitle">
+            Technologies I'm learning and planning to explore.
+          </p>
+        </div>
+
+        <div class="skills-category reveal">
+          <h3>
+            <i class="fa-solid fa-code"></i>
+            <span data-i18n="currentlyLearning">Currently Learning</span>
+          </h3>
+
+          <div class="skills-grid">
+
+            <article class="skill-card">
+              <i class="fa-brands fa-html5 skill-html"></i>
+              <h4>HTML5</h4>
+              <span data-i18n="learningStatus">Learning</span>
+            </article>
+
+            <article class="skill-card">
+              <i class="fa-brands fa-css3-alt skill-css"></i>
+              <h4>CSS3</h4>
+              <span data-i18n="learningStatus">Learning</span>
+            </article>
+
+            <article class="skill-card">
+              <i class="fa-brands fa-js skill-js"></i>
+              <h4>JavaScript</h4>
+              <span data-i18n="learningStatus">Learning</span>
+            </article>
+
+            <article class="skill-card">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              <h4>Responsive Design</h4>
+              <span data-i18n="learningStatus">Learning</span>
+            </article>
+
+            <article class="skill-card">
+              <i class="fa-solid fa-palette"></i>
+              <h4>UI & Layout</h4>
+              <span data-i18n="learningStatus">Learning</span>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="skills-category reveal">
+          <h3>
+            <i class="fa-solid fa-road"></i>
+            <span data-i18n="futureSkills">Learning Roadmap</span>
+          </h3>
+
+          <div class="skills-grid">
+
+            <article class="skill-card future">
+              <i class="fa-brands fa-git-alt"></i>
+              <h4>Git & GitHub</h4>
+              <span data-i18n="plannedStatus">Planned</span>
+            </article>
+
+            <article class="skill-card future">
+              <i class="fa-brands fa-react"></i>
+              <h4>React.js</h4>
+              <span data-i18n="plannedStatus">Planned</span>
+            </article>
+
+            <article class="skill-card future">
+              <i class="fa-brands fa-node-js"></i>
+              <h4>Node.js</h4>
+              <span data-i18n="plannedStatus">Planned</span>
+            </article>
+
+            <article class="skill-card future">
+              <i class="fa-solid fa-server"></i>
+              <h4>Express.js</h4>
+              <span data-i18n="plannedStatus">Planned</span>
+            </article>
+
+            <article class="skill-card future">
+              <i class="fa-solid fa-database"></i>
+              <h4>Databases</h4>
+              <span data-i18n="plannedStatus">Planned</span>
+            </article>
+
+            <article class="skill-card future">
+              <i class="fa-solid fa-plug"></i>
+              <h4>API Integration</h4>
+              <span data-i18n="plannedStatus">Planned</span>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="section projects-section" id="projects">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="section-label" data-i18n="projectsLabel">03 / MY IDEAS</span>
+          <h2 data-i18n="projectsHeading">Featured <span>Projects</span></h2>
+          <p data-i18n="projectsSubtitle">
+            Concepts and ongoing work from my development journey.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1 -->
+          <article class="project-card reveal">
+
+            <div class="project-visual visual-ai">
+              <i class="fa-solid fa-robot"></i>
+              <span class="project-visual-title">OMSA NEXUS</span>
+            </div>
+
+            <div class="project-content">
+
+              <span class="project-status" data-i18n="projectStatus">
+                Concept / In Development
+              </span>
+
+              <h3>OMSA Nexus</h3>
+
+              <p data-i18n="omsaDescription">
+                A personal AI assistant concept exploring intelligent
+                assistance, productivity features, voice interaction
+                and user-authorized device actions.
+              </p>
+
+              <div class="project-tags">
+                <span>AI</span>
+                <span>Automation</span>
+                <span>Productivity</span>
+              </div>
+
+              <div class="project-links">
+                <span class="project-unavailable" data-i18n="demoPending">
+                  Demo coming later
+                </span>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT 2 -->
+          <article class="project-card reveal">
+
+            <div class="project-visual visual-education">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span class="project-visual-title">EXAMSATHI</span>
+            </div>
+
+            <div class="project-content">
+
+              <span class="project-status" data-i18n="projectStatus">
+                Concept / In Development
+              </span>
+
+              <h3>ExamSathi</h3>
+
+              <p data-i18n="examDescription">
+                An educational platform concept for Lok Sewa
+                and banking exam preparation, with planned
+                notes, quizzes, progress tracking and AI support.
+              </p>
+
+              <div class="project-tags">
+                <span>EdTech</span>
+                <span>Learning</span>
+                <span>AI</span>
+              </div>
+
+              <div class="project-links">
+                <span class="project-unavailable" data-i18n="demoPending">
+                  Demo coming later
+                </span>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="project-card reveal">
+
+            <div class="project-visual visual-productivity">
+              <i class="fa-solid fa-list-check"></i>
+              <span class="project-visual-title">PRODUCTIVITY</span>
+            </div>
+
+            <div class="project-content">
+
+              <span class="project-status" data-i18n="projectStatus">
+                Concept / In Development
+              </span>
+
+              <h3>Productivity Dashboard</h3>
+
+              <p data-i18n="dashboardDescription">
+                A personal organization application concept
+                exploring task management, goals, schedules,
+                progress tracking and productivity statistics.
+              </p>
+
+              <div class="project-tags">
+                <span>Dashboard</span>
+                <span>Planning</span>
+                <span>Web App</span>
+              </div>
+
+              <div class="project-links">
+                <span class="project-unavailable" data-i18n="demoPending">
+                  Demo coming later
+                </span>
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========== EDUCATION ========== -->
+    <section class="section education-section" id="education">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="section-label" data-i18n="educationLabel">04 / ACADEMICS</span>
+          <h2 data-i18n="educationHeading">My <span>Education</span></h2>
+          <p data-i18n="educationSubtitle">
+            My academic background and learning journey.
+          </p>
+        </div>
+
+        <div class="timeline">
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div class="timeline-content">
+              <span class="timeline-badge" data-i18n="higherSecondary">
+                Higher Secondary Education (+2)
+              </span>
+
+              <h3>Brooklyn Academy College</h3>
+
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Sukedhara, Kathmandu, Nepal
+              </p>
+
+              <div class="gpa-badge">GPA: 3.87</div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-school"></i>
+            </div>
+
+            <div class="timeline-content">
+              <span class="timeline-badge" data-i18n="secondary">
+                Secondary Education (SEE)
+              </span>
+
+              <h3>Shree Naulin Secondary School</h3>
+
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Budhanilkantha-13, Chunikhel, Kathmandu, Nepal
+              </p>
+
+              <div class="gpa-badge">GPA: 3.45</div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========== SERVICES ========== -->
+    <section class="section services-section" id="services">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="section-label" data-i18n="servicesLabel">05 / FUTURE SERVICES</span>
+          <h2 data-i18n="servicesHeading">What I'm <span>Working Toward</span></h2>
+          <p data-i18n="servicesSubtitle">
+            Development services I aim to provide as my skills grow.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card reveal">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3 data-i18n="service1">Portfolio Websites</h3>
+            <p data-i18n="service1Desc">
+              Personal websites that present professional skills and projects.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <h3 data-i18n="service2">Responsive Web Design</h3>
+            <p data-i18n="service2Desc">
+              Layouts designed for desktop, tablet and mobile devices.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <i class="fa-solid fa-window-maximize"></i>
+            <h3 data-i18n="service3">Landing Pages</h3>
+            <p data-i18n="service3Desc">
+              Focused web pages for products, services and personal brands.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <i class="fa-solid fa-code"></i>
+            <h3 data-i18n="service4">Frontend Development</h3>
+            <p data-i18n="service4Desc">
+              Interactive website interfaces using modern web technologies.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3 data-i18n="service5">Website Customization</h3>
+            <p data-i18n="service5Desc">
+              Improving layouts, styling and basic website functionality.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3 data-i18n="service6">Educational Web Apps</h3>
+            <p data-i18n="service6Desc">
+              Exploring practical applications for learning and productivity.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========== LEARNING JOURNEY ========== -->
+    <section class="section journey-section" id="journey">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="section-label" data-i18n="journeyLabel">06 / GROWTH</span>
+          <h2 data-i18n="journeyHeading">My Learning <span>Journey</span></h2>
+          <p data-i18n="journeySubtitle">
+            A roadmap toward becoming a professional full-stack developer.
+          </p>
+        </div>
+
+        <div class="journey-grid">
+
+          <div class="journey-step reveal">
+            <span class="journey-number">01</span>
+            <h3 data-i18n="journey1">Web Fundamentals</h3>
+            <p>HTML • CSS • JavaScript</p>
+            <span class="journey-status current" data-i18n="learningStatus">
+              Learning
+            </span>
+          </div>
+
+          <div class="journey-step reveal">
+            <span class="journey-number">02</span>
+            <h3 data-i18n="journey2">Developer Tools</h3>
+            <p>Git • GitHub • Debugging</p>
+            <span class="journey-status" data-i18n="plannedStatus">
+              Planned
+            </span>
+          </div>
+
+          <div class="journey-step reveal">
+            <span class="journey-number">03</span>
+            <h3 data-i18n="journey3">Frontend Frameworks</h3>
+            <p>React • APIs • UI</p>
+            <span class="journey-status" data-i18n="plannedStatus">
+              Planned
+            </span>
+          </div>
+
+          <div class="journey-step reveal">
+            <span class="journey-number">04</span>
+            <h3 data-i18n="journey4">Backend Development</h3>
+            <p>Node.js • Express • Databases</p>
+            <span class="journey-status" data-i18n="plannedStatus">
+              Planned
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact-section" id="contact">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="section-label" data-i18n="contactLabel">07 / GET IN TOUCH</span>
+          <h2 data-i18n="contactHeading">Let's <span>Connect</span></h2>
+          <p data-i18n="contactSubtitle">
+            Have an idea, suggestion or opportunity? Feel free to reach out.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info reveal">
+
+            <h3 data-i18n="contactInfoTitle">
+              Let's start a conversation.
+            </h3>
+
+            <p data-i18n="contactInfoDesc">
+              I'm always interested in learning, collaboration
+              and meaningful technology discussions.
+            </p>
+
+            <a
+              href="mailto:sajankhadka2063@gmail.com"
+              class="contact-detail"
+            >
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <span>Email</span>
+                <strong>sajankhadka2063@gmail.com</strong>
+              </div>
+            </a>
+
+            <div class="contact-detail">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <span data-i18n="infoLocation">Location</span>
+                <strong>Lalitpur, Nepal</strong>
+              </div>
+            </div>
+
+            <div class="cv-notice">
+              <i class="fa-solid fa-file-lines"></i>
+              <span data-i18n="cvNotice">
+                English and Nepali CVs will be available soon.
+              </span>
+            </div>
+
+          </div>
+
+          <form class="contact-form reveal" id="contactForm">
+
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="contactName" data-i18n="formName">Your Name</label>
+                <input
+                  type="text"
+                  id="contactName"
+                  name="name"
+                  placeholder="Your name"
+                  data-i18n-placeholder="namePlaceholder"
+                  required
+                  minlength="2"
+                  maxlength="100"
+                  autocomplete="name"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" data-i18n="formEmail">Your Email</label>
+                <input
+                  type="email"
+                  id="contactEmail"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                  maxlength="254"
+                  autocomplete="email"
+                >
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject" data-i18n="formSubject">Subject</label>
+              <input
+                type="text"
+                id="contactSubject"
+                name="subject"
+                placeholder="What is this about?"
+                data-i18n-placeholder="subjectPlaceholder"
+                required
+                maxlength="150"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage" data-i18n="formMessage">Message</label>
+              <textarea
+                id="contactMessage"
+                name="message"
+                rows="6"
+                placeholder="Write your message..."
+                data-i18n-placeholder="messagePlaceholder"
+                required
+                minlength="10"
+                maxlength="3000"
+              ></textarea>
+            </div>
+
+            <button class="btn btn-primary submit-btn" type="submit">
+              <span data-i18n="sendMessage"></span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <p class="form-note" data-i18n="formNote">
+              This opens your email app with the message prepared.
+              You must send it from your email app.
+            </p>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+
+    <div class="container footer-content">
+
+      <a href="#home" class="logo">
+        Sajan<span class="accent">Khadka</span>
+      </a>
+
+      <p data-i18n="footerText">
+        Learning. Building. Growing.
+      </p>
+
+      <p>© <span id="currentYear">2026</span> Sajan Khadka.</p>
+
+    </div>
+
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
+<!-- Interactive Particle Background -->
+<script src="particles.js" defer></script>
+
+</body>
+</html>
