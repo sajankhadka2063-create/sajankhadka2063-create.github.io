@@ -1,605 +1,671 @@
 
-/* =========================================
-   SAJAN KHADKA PORTFOLIO
-   MAIN JAVASCRIPT ENGINE
-========================================= */
+/* =========================================================
+   SAJAN KHADKA — PORTFOLIO JAVASCRIPT
+   Features:
+   1. Mobile navigation
+   2. English / Nepali language switching
+   3. Typing animation
+   4. Scroll reveal animations
+   5. Navbar scroll effect
+   6. Active navigation link
+   7. Back-to-top button
+   8. Contact form submission
+   9. Profile image fallback
+   10. Scroll progress indicator
+   11. Profile tilt effect
+   12. Footer year
+========================================================= */
 
 "use strict";
 
-/* ========== 1. SELECT HTML ELEMENTS ========== */
+/* =========================================================
+   1. SELECT HTML ELEMENTS
+========================================================= */
 
 const header = document.getElementById("header");
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
+const languageToggle = document.getElementById("languageToggle");
+const languageLabel = document.getElementById("languageLabel");
+const typingText = document.getElementById("typingText");
+const backToTop = document.getElementById("backToTop");
+const contactForm = document.getElementById("contactForm");
+const profilePhoto = document.getElementById("profilePhoto");
+const profileFallback = document.getElementById("profileFallback");
+const scrollProgress = document.getElementById("scrollProgress");
+const currentYear = document.getElementById("currentYear");
 
-const languageToggle =
-  document.getElementById("languageToggle");
-
-const languageLabel =
-  document.getElementById("languageLabel");
-
-const typingText =
-  document.getElementById("typingText");
-
-const backToTop =
-  document.getElementById("backToTop");
-
-const contactForm =
-  document.getElementById("contactForm");
-
-const profilePhoto =
-  document.getElementById("profilePhoto");
-
-const profileFallback =
-  document.getElementById("profileFallback");
-
-
-/* ========== 2. LANGUAGE STATE ========== */
+/* =========================================================
+   2. LANGUAGE SETTINGS
+========================================================= */
 
 const supportedLanguages = ["en", "ne"];
 
 let currentLanguage = "en";
 
 try {
-  const savedLanguage =
-    localStorage.getItem("sajanPortfolioLanguage");
+    const savedLanguage = localStorage.getItem("sajanPortfolioLanguage");
 
-  if (supportedLanguages.includes(savedLanguage)) {
-    currentLanguage = savedLanguage;
-  }
+    if (supportedLanguages.includes(savedLanguage)) {
+        currentLanguage = savedLanguage;
+    }
 } catch (error) {
-  console.warn("Language storage is unavailable.");
+    console.warn("Language preference could not be loaded.", error);
 }
 
+/* =========================================================
+   3. TYPING ANIMATION
+========================================================= */
 
-/* ========== 3. TYPING ANIMATION ========== */
-
-let typingTimer = null;
 let typingIndex = 0;
 let characterIndex = 0;
 let isDeleting = false;
+let typingTimer = null;
 
-function runTypingAnimation() {
-  if (!typingText) return;
+function getTypingTexts() {
+    if (
+        typeof translations === "undefined" ||
+        !translations[currentLanguage] ||
+        !Array.isArray(translations[currentLanguage].typingTexts)
+    ) {
+        return [
+            "Aspiring Full-Stack Developer",
+            "Web Development Enthusiast",
+            "Creative Problem Solver"
+        ];
+    }
 
-  const words =
-    translations[currentLanguage].typingTexts;
+    return translations[currentLanguage].typingTexts;
+}
 
-  const currentWord = words[typingIndex];
+function typeEffect() {
+    if (!typingText) {
+        return;
+    }
 
-  if (isDeleting) {
-    characterIndex--;
-  } else {
-    characterIndex++;
-  }
+    const texts = getTypingTexts();
 
-  typingText.textContent =
-    Array.from(currentWord)
-      .slice(0, characterIndex)
-      .join("");
+    if (texts.length === 0) {
+        typingText.textContent = "";
+        return;
+    }
 
-  let speed = isDeleting ? 45 : 85;
+    if (typingIndex >= texts.length) {
+        typingIndex = 0;
+    }
 
-  if (!isDeleting &&
-      characterIndex >= Array.from(currentWord).length) {
-    isDeleting = true;
-    speed = 1600;
-  }
+    const currentText = texts[typingIndex];
 
-  if (isDeleting && characterIndex <= 0) {
-    isDeleting = false;
-    typingIndex = (typingIndex + 1) % words.length;
-    speed = 350;
-  }
+    if (!isDeleting) {
+        characterIndex++;
 
-  typingTimer = setTimeout(runTypingAnimation, speed);
+        typingText.textContent = currentText.substring(
+            0,
+            characterIndex
+        );
+
+        if (characterIndex >= currentText.length) {
+            isDeleting = true;
+
+            typingTimer = setTimeout(typeEffect, 1500);
+            return;
+        }
+
+        typingTimer = setTimeout(typeEffect, 75);
+    } else {
+        characterIndex--;
+
+        typingText.textContent = currentText.substring(
+            0,
+            characterIndex
+        );
+
+        if (characterIndex <= 0) {
+            isDeleting = false;
+            typingIndex = (typingIndex + 1) % texts.length;
+
+            typingTimer = setTimeout(typeEffect, 350);
+            return;
+        }
+
+        typingTimer = setTimeout(typeEffect, 35);
+    }
 }
 
 function restartTypingAnimation() {
-  clearTimeout(typingTimer);
+    if (typingTimer) {
+        clearTimeout(typingTimer);
+    }
 
-  typingIndex = 0;
-  characterIndex = 0;
-  isDeleting = false;
+    typingIndex = 0;
+    characterIndex = 0;
+    isDeleting = false;
 
-  if (!typingText) return;
-
-  const words =
-    translations[currentLanguage].typingTexts;
-
-  const reducedMotion =
-    window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-  if (reducedMotion) {
-    typingText.textContent = words[0];
-    return;
-  }
-
-  typingText.textContent = "";
-  runTypingAnimation();
+    if (typingText) {
+        typingText.textContent = "";
+        typingTimer = setTimeout(typeEffect, 300);
+    }
 }
 
+/* =========================================================
+   4. LANGUAGE SWITCHING
+   Requires translations.js to load before script.js.
+========================================================= */
 
-/* ========== 4. LANGUAGE SWITCHER ========== */
-
-// Only these heading keys contain trusted HTML.
-const htmlTranslationKeys = new Set([
-  "aboutHeading",
-  "skillsHeading",
-  "projectsHeading",
-  "educationHeading",
-  "servicesHeading",
-  "journeyHeading",
-  "contactHeading"
-]);
+const trustedHTMLKeys = [
+    "aboutHeading",
+    "skillsHeading",
+    "projectsHeading",
+    "educationHeading",
+    "servicesHeading",
+    "journeyHeading",
+    "contactHeading"
+];
 
 function changeLanguage(language) {
-  if (!supportedLanguages.includes(language)) return;
+    if (!supportedLanguages.includes(language)) {
+        language = "en";
+    }
 
-  currentLanguage = language;
+    currentLanguage = language;
 
-  const dictionary = translations[language];
+    try {
+        localStorage.setItem(
+            "sajanPortfolioLanguage",
+            currentLanguage
+        );
+    } catch (error) {
+        console.warn("Language preference could not be saved.", error);
+    }
 
-  document.querySelectorAll("[data-i18n]")
-    .forEach(function(element) {
+    document.documentElement.lang = currentLanguage;
 
-      const key = element.dataset.i18n;
-      const value = dictionary[key];
+    if (
+        typeof translations !== "undefined" &&
+        translations[currentLanguage]
+    ) {
+        const languageData = translations[currentLanguage];
 
-      if (typeof value !== "string") return;
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+            const key = element.getAttribute("data-i18n");
 
-      if (htmlTranslationKeys.has(key)) {
-        element.innerHTML = value;
-      } else {
-        element.textContent = value;
-      }
-    });
+            if (!Object.prototype.hasOwnProperty.call(languageData, key)) {
+                return;
+            }
 
-  document.querySelectorAll("[data-i18n-placeholder]")
-    .forEach(function(element) {
+            const translatedText = languageData[key];
 
-      const key = element.dataset.i18nPlaceholder;
-      const value = dictionary[key];
+            if (
+                trustedHTMLKeys.includes(key) &&
+                typeof translatedText === "string"
+            ) {
+                element.innerHTML = translatedText;
+            } else {
+                element.textContent = translatedText;
+            }
+        });
 
-      if (typeof value === "string") {
-        element.placeholder = value;
-      }
-    });
+        document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+            const key = element.getAttribute("data-i18n-placeholder");
 
-  document.documentElement.lang = language;
+            if (
+                Object.prototype.hasOwnProperty.call(languageData, key)
+            ) {
+                element.setAttribute(
+                    "placeholder",
+                    languageData[key]
+                );
+            }
+        });
 
-  if (languageLabel) {
-    languageLabel.textContent =
-      language === "en" ? "नेपाली" : "English";
-  }
+        document.querySelectorAll("[data-i18n-title]").forEach((element) => {
+            const key = element.getAttribute("data-i18n-title");
 
-  if (languageToggle) {
-    languageToggle.setAttribute(
-      "aria-label",
-      language === "en"
-        ? "Switch to Nepali"
-        : "Switch to English"
-    );
-  }
+            if (
+                Object.prototype.hasOwnProperty.call(languageData, key)
+            ) {
+                element.setAttribute("title", languageData[key]);
+            }
+        });
 
-  try {
-    localStorage.setItem(
-      "sajanPortfolioLanguage",
-      language
-    );
-  } catch (error) {
-    console.warn("Could not save language preference.");
-  }
+        document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+            const key = element.getAttribute("data-i18n-aria-label");
 
-  restartTypingAnimation();
+            if (
+                Object.prototype.hasOwnProperty.call(languageData, key)
+            ) {
+                element.setAttribute(
+                    "aria-label",
+                    languageData[key]
+                );
+            }
+        });
+    }
+
+    if (languageLabel) {
+        languageLabel.textContent =
+            currentLanguage === "en" ? "NE" : "EN";
+    }
+
+    if (languageToggle) {
+        languageToggle.setAttribute(
+            "aria-label",
+            currentLanguage === "en"
+                ? "Switch language to Nepali"
+                : "Switch language to English"
+        );
+    }
+
+    restartTypingAnimation();
 }
 
 if (languageToggle) {
-  languageToggle.addEventListener("click", function() {
-    const nextLanguage =
-      currentLanguage === "en" ? "ne" : "en";
+    languageToggle.addEventListener("click", () => {
+        const nextLanguage =
+            currentLanguage === "en" ? "ne" : "en";
 
-    changeLanguage(nextLanguage);
-  });
+        changeLanguage(nextLanguage);
+    });
 }
 
-
-/* ========== 5. MOBILE NAVIGATION ========== */
+/* =========================================================
+   5. MOBILE NAVIGATION
+========================================================= */
 
 function closeMobileMenu() {
-  if (!navLinks || !menuToggle) return;
+    if (navLinks) {
+        navLinks.classList.remove("active");
+    }
 
-  navLinks.classList.remove("active");
+    if (menuToggle) {
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+    }
 
-  menuToggle.setAttribute(
-    "aria-expanded",
-    "false"
-  );
-
-  menuToggle.setAttribute(
-    "aria-label",
-    "Open navigation menu"
-  );
-
-  menuToggle.innerHTML =
-    '<i class="fa-solid fa-bars"></i>';
+    document.body.classList.remove("menu-open");
 }
 
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", function() {
+function toggleMobileMenu() {
+    if (!navLinks || !menuToggle) {
+        return;
+    }
 
-    const isOpen =
-      navLinks.classList.toggle("active");
+    const isOpen = navLinks.classList.toggle("active");
 
-    menuToggle.setAttribute(
-      "aria-expanded",
-      String(isOpen)
-    );
+    menuToggle.classList.toggle("active", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
 
-    menuToggle.setAttribute(
-      "aria-label",
-      isOpen
-        ? "Close navigation menu"
-        : "Open navigation menu"
-    );
+    document.body.classList.toggle("menu-open", isOpen);
+}
 
-    menuToggle.innerHTML = isOpen
-      ? '<i class="fa-solid fa-xmark"></i>'
-      : '<i class="fa-solid fa-bars"></i>';
-  });
+if (menuToggle) {
+    menuToggle.addEventListener("click", toggleMobileMenu);
+}
 
-  navLinks.querySelectorAll("a")
-    .forEach(function(link) {
-      link.addEventListener(
-        "click",
-        closeMobileMenu
-      );
-    });
+document.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+});
 
-  document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-      closeMobileMenu();
+        closeMobileMenu();
     }
-  });
+});
 
-  document.addEventListener("click", function(event) {
-    if (
-      navLinks.classList.contains("active") &&
-      !navLinks.contains(event.target) &&
-      !menuToggle.contains(event.target)
-    ) {
-      closeMobileMenu();
+document.addEventListener("click", (event) => {
+    if (!navLinks || !menuToggle) {
+        return;
     }
-  });
 
-  window.addEventListener("resize", function() {
+    const clickedInsideMenu = navLinks.contains(event.target);
+    const clickedToggle = menuToggle.contains(event.target);
+
+    if (!clickedInsideMenu && !clickedToggle) {
+        closeMobileMenu();
+    }
+});
+
+window.addEventListener("resize", () => {
     if (window.innerWidth > 900) {
-      closeMobileMenu();
+        closeMobileMenu();
     }
-  });
-}
+});
 
-
-/* ========== 6. NAVBAR SCROLL EFFECT ========== */
+/* =========================================================
+   6. NAVBAR, BACK-TO-TOP AND SCROLL PROGRESS
+========================================================= */
 
 function updateScrollUI() {
-  const scrollY = window.scrollY;
+    const scrollY = window.scrollY || window.pageYOffset;
 
-  if (header) {
-    header.classList.toggle(
-      "scrolled",
-      scrollY > 30
-    );
-  }
-
-  if (backToTop) {
-    backToTop.classList.toggle(
-      "visible",
-      scrollY > 450
-    );
-  }
-}
-
-window.addEventListener(
-  "scroll",
-  updateScrollUI,
-  { passive: true }
-);
-
-
-/* ========== 7. ACTIVE NAVIGATION LINKS ========== */
-
-const navigationLinks =
-  document.querySelectorAll(".nav-link");
-
-const sections =
-  document.querySelectorAll("main section[id]");
-
-function updateActiveNavigation() {
-  const scrollPosition = window.scrollY + 160;
-
-  let activeSection = "home";
-
-  sections.forEach(function(section) {
-    if (section.offsetTop <= scrollPosition) {
-      activeSection = section.id;
+    if (header) {
+        header.classList.toggle("scrolled", scrollY > 40);
     }
-  });
 
-  navigationLinks.forEach(function(link) {
-    const isActive =
-      link.getAttribute("href") ===
-      "#" + activeSection;
+    if (backToTop) {
+        backToTop.classList.toggle("visible", scrollY > 450);
+    }
 
-    link.classList.toggle("active", isActive);
-  });
+    if (scrollProgress) {
+        const scrollableHeight =
+            document.documentElement.scrollHeight -
+            window.innerHeight;
+
+        const progress =
+            scrollableHeight > 0
+                ? (scrollY / scrollableHeight) * 100
+                : 0;
+
+        scrollProgress.style.width = `${Math.min(progress, 100)}%`;
+    }
 }
 
-window.addEventListener(
-  "scroll",
-  updateActiveNavigation,
-  { passive: true }
-);
+window.addEventListener("scroll", updateScrollUI, {
+    passive: true
+});
 
+window.addEventListener("resize", updateScrollUI);
 
-/* ========== 8. SCROLL REVEAL ANIMATIONS ========== */
+if (backToTop) {
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+
+/* =========================================================
+   7. ACTIVE NAVIGATION LINK
+========================================================= */
+
+function updateActiveNavLink() {
+    const sections = document.querySelectorAll("main section[id]");
+    const navItems = document.querySelectorAll(".nav-link");
+
+    let currentSection = "";
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 180;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionBottom
+        ) {
+            currentSection = section.id;
+        }
+    });
+
+    navItems.forEach((link) => {
+        const href = link.getAttribute("href");
+
+        const isActive =
+            href === `#${currentSection}` &&
+            currentSection !== "";
+
+        link.classList.toggle("active", isActive);
+
+        if (isActive) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+}
+
+window.addEventListener("scroll", updateActiveNavLink, {
+    passive: true
+});
+
+/* =========================================================
+   8. SCROLL REVEAL ANIMATIONS
+========================================================= */
 
 function initializeRevealAnimations() {
-  const elements =
-    document.querySelectorAll(".reveal");
+    const revealElements = document.querySelectorAll(".reveal");
 
-  if (
-    !("IntersectionObserver" in window) ||
-    window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches
-  ) {
-    elements.forEach(function(element) {
-      element.classList.add("visible");
-    });
-    return;
-  }
+    if (!("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => {
+            element.classList.add("visible");
+        });
 
-  const observer = new IntersectionObserver(
-    function(entries, currentObserver) {
-
-      entries.forEach(function(entry) {
-
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          currentObserver.unobserve(entry.target);
-        }
-
-      });
-
-    },
-    {
-      threshold: 0.08,
-      rootMargin: "0px 0px 30px 0px"
+        return;
     }
-  );
 
-  elements.forEach(function(element) {
-    observer.observe(element);
-  });
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.12,
+            rootMargin: "0px 0px -40px 0px"
+        }
+    );
+
+    revealElements.forEach((element) => {
+        revealObserver.observe(element);
+    });
 }
 
-
-/* ========== 9. PROFILE IMAGE FALLBACK ========== */
+/* =========================================================
+   9. PROFILE PHOTO FALLBACK
+========================================================= */
 
 function showProfileFallback() {
-  if (profilePhoto) {
-    profilePhoto.hidden = true;
-  }
+    if (profilePhoto) {
+        profilePhoto.style.display = "none";
+    }
 
-  if (profileFallback) {
-    profileFallback.hidden = false;
-  }
+    if (profileFallback) {
+        profileFallback.style.display = "flex";
+    }
 }
 
 if (profilePhoto) {
-  profilePhoto.addEventListener(
-    "error",
-    showProfileFallback
-  );
+    profilePhoto.addEventListener("error", showProfileFallback);
 
-  if (profilePhoto.complete &&
-      profilePhoto.naturalWidth === 0) {
-    showProfileFallback();
-  }
+    if (profilePhoto.complete && profilePhoto.naturalWidth === 0) {
+        showProfileFallback();
+    }
 }
 
+/* =========================================================
+   10. PROFILE TILT EFFECT
+========================================================= */
 
-/* ========== 10. CONTACT FORM ========== */
+function initializeProfileTilt() {
+    const profileFrame = document.querySelector(".profile-frame");
+    const heroVisual = document.querySelector(".hero-visual");
 
+    if (!profileFrame || !heroVisual) {
+        return;
+    }
 
-/* ========== CONTACT FORM: FORMSPREE ========== */
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (reducedMotion) {
+        return;
+    }
+
+    if (window.matchMedia("(pointer: coarse)").matches) {
+        return;
+    }
+
+    heroVisual.addEventListener("mousemove", (event) => {
+        const rect = heroVisual.getBoundingClientRect();
+
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateY = ((x - centerX) / centerX) * 5;
+        const rotateX = ((centerY - y) / centerY) * 5;
+
+        profileFrame.style.transform =
+            `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    heroVisual.addEventListener("mouseleave", () => {
+        profileFrame.style.transform =
+            "perspective(1000px) rotateX(0deg) rotateY(0deg)";
+    });
+}
+
+/* =========================================================
+   11. CONTACT FORM
+   Form endpoint: Formspree
+========================================================= */
 
 if (contactForm) {
-  contactForm.addEventListener("submit", async function (event) {
-    event.preventDefault();
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-    if (!contactForm.reportValidity()) {
-      return;
-    }
+        const submitButton = contactForm.querySelector(
+            'button[type="submit"], input[type="submit"]'
+        );
 
-    const submitButton = contactForm.querySelector(
-      'button[type="submit"]'
-    );
-    const statusMessage = contactForm.querySelector(".form-note");
+        const formNote = contactForm.querySelector(".form-note");
 
-    const originalButtonText = submitButton
-      ? submitButton.innerHTML
-      : "";
-
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.innerHTML =
-        'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
-    }
-
-    if (statusMessage) {
-      statusMessage.textContent = "Sending your message...";
-    }
-
-    try {
-      const response = await fetch(
-        "https://formspree.io/f/mjygjkee",
-        {
-          method: "POST",
-          body: new FormData(contactForm),
-          headers: {
-            Accept: "application/json"
-          }
+        if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
         }
-      );
 
-      if (!response.ok) {
-        throw new Error("Message submission failed.");
-      }
+        const formAction = contactForm.getAttribute("action");
 
-      contactForm.reset();
+        if (
+            !formAction ||
+            formAction.includes("YOUR_FORM_ID") ||
+            !formAction.includes("formspree.io")
+        ) {
+            if (formNote) {
+                formNote.textContent =
+                    "The contact form is not configured yet. Please contact me through WhatsApp or email.";
+                formNote.classList.add("error");
+            }
 
-      if (statusMessage) {
-        statusMessage.textContent =
-          "Thank you! Your message was submitted successfully.";
-      }
-    } catch (error) {
-      if (statusMessage) {
-        statusMessage.textContent =
-          "Sorry, your message could not be sent. Please try again.";
-      }
+            return;
+        }
 
-      console.error("Contact form error:", error);
-    } finally {
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalButtonText;
-      }
-    }
-  });
+        const originalButtonText = submitButton
+            ? submitButton.textContent
+            : "";
+
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+        }
+
+        if (formNote) {
+            formNote.textContent = "";
+            formNote.classList.remove("success", "error");
+        }
+
+        try {
+            const response = await fetch(formAction, {
+                method: "POST",
+                body: new FormData(contactForm),
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error("Form submission failed.");
+            }
+
+            contactForm.reset();
+
+            if (formNote) {
+                formNote.textContent =
+                    currentLanguage === "ne"
+                        ? "धन्यवाद! तपाईंको सन्देश सफलतापूर्वक पठाइयो।"
+                        : "Thank you! Your message was submitted successfully.";
+
+                formNote.classList.add("success");
+            }
+        } catch (error) {
+            console.error("Contact form error:", error);
+
+            if (formNote) {
+                formNote.textContent =
+                    currentLanguage === "ne"
+                        ? "सन्देश पठाउन सकिएन। कृपया WhatsApp वा email बाट सम्पर्क गर्नुहोस्।"
+                        : "Your message could not be sent. Please contact me through WhatsApp or email.";
+
+                formNote.classList.add("error");
+            }
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
+        }
+    });
 }
 
-/* ========== 11. FOOTER YEAR ========== */
-
-const currentYear =
-  document.getElementById("currentYear");
+/* =========================================================
+   12. FOOTER YEAR
+========================================================= */
 
 if (currentYear) {
-  currentYear.textContent =
-    new Date().getFullYear();
+    currentYear.textContent = new Date().getFullYear();
 }
 
+/* =========================================================
+   13. OPTIONAL CARD HOVER EFFECT
+========================================================= */
 
-/* ========== 12. INITIALIZATION ========== */
+function initializeCardEffects() {
+    const cards = document.querySelectorAll(
+        ".skill-card, .project-card, .service-card, .education-card"
+    );
+
+    cards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+            card.classList.add("hovered");
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.classList.remove("hovered");
+        });
+    });
+}
+
+/* =========================================================
+   14. PAGE INITIALIZATION
+========================================================= */
 
 function initializePortfolio() {
+    changeLanguage(currentLanguage);
 
-  // Activate CSS reveal behavior only when JS runs.
-  document.documentElement.classList.add(
-    "js-enabled"
-  );
+    updateScrollUI();
+    updateActiveNavLink();
 
-  changeLanguage(currentLanguage);
+    initializeRevealAnimations();
+    initializeProfileTilt();
+    initializeCardEffects();
 
-  updateScrollUI();
-  updateActiveNavigation();
-  initializeRevealAnimations();
-
-  console.log(
-    "Sajan Khadka Portfolio initialized successfully."
-  );
+    if (typingText) {
+        restartTypingAnimation();
+    }
 }
 
-initializePortfolio();
-
-/* ==========================================
-   PREMIUM UI INTERACTIONS
-========================================== */
-
-// SCROLL PROGRESS
-
-const scrollProgress =
-    document.getElementById("scrollProgress");
-
-function updateScrollProgress() {
-    if (!scrollProgress) return;
-
-    const scrollableHeight =
-        document.documentElement.scrollHeight -
-        window.innerHeight;
-
-    const progress = scrollableHeight > 0
-        ? (window.scrollY / scrollableHeight) * 100
-        : 0;
-
-    scrollProgress.style.width =
-        Math.min(100, Math.max(0, progress)) + "%";
-}
-
-window.addEventListener(
-    "scroll",
-    updateScrollProgress,
-    { passive: true }
-);
-
-window.addEventListener(
-    "resize",
-    updateScrollProgress
-);
-
-updateScrollProgress();
-
-
-// 3D PROFILE PHOTO TILT
-
-const profileFrame =
-    document.querySelector(".profile-frame");
-
-const heroVisual =
-    document.querySelector(".hero-visual");
-
-const reduceMotion =
-    window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
+if (document.readyState === "loading") {
+    document.addEventListener(
+        "DOMContentLoaded",
+        initializePortfolio
     );
-
-if (profileFrame && heroVisual && !reduceMotion.matches) {
-
-    heroVisual.addEventListener(
-        "pointermove",
-        function(event) {
-
-            if (event.pointerType === "touch") return;
-
-            const rect =
-                heroVisual.getBoundingClientRect();
-
-            const x =
-                (event.clientX - rect.left) /
-                rect.width;
-
-            const y =
-                (event.clientY - rect.top) /
-                rect.height;
-
-            const rotateY = (x - 0.5) * 16;
-            const rotateX = (0.5 - y) * 16;
-
-            profileFrame.style.transform =
-                `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-        }
-    );
-
-    heroVisual.addEventListener(
-        "pointerleave",
-        function() {
-            profileFrame.style.transform =
-                "rotateX(0deg) rotateY(0deg)";
-        }
-    );
-
+} else {
+    initializePortfolio();
 }
