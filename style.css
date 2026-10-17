@@ -3399,3 +3399,79 @@ button:focus-visible {
         animation: none;
     }
 }
+
+/* =========================================
+   ANIMATED SAJAN KHADKA LOGO
+========================================= */
+
+.logo {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo-name {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--text-color, #ffffff);
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: logoEntrance 1s ease-out both;
+}
+
+/* Gradient text animation */
+.logo-name {
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #00e5ff,
+        #a78bfa,
+        #ffffff
+    );
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation:
+        logoEntrance 0.8s ease-out both,
+        logoGradient 5s ease-in-out infinite;
+}
+
+/* Hover effect */
+.logo:hover .logo-name {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.65));
+}
+
+/* Entrance animation */
+@keyframes logoEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Moving gradient */
+@keyframes logoGradient {
+    0%, 100% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .logo-name {
+        animation: none;
+    }
+}
