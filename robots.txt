@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sajankhadka2063-create.github.io/sitemap.xml
