@@ -58,9 +58,11 @@
     particleColor: "0, 190, 255",
     connectionColor: "0, 190, 255",
 
-    desktopParticles: 70,
-    tabletParticles: 45,
-    mobileParticles: 25,
+    
+desktopParticles: 120,
+tabletParticles: 75,
+mobileParticles: 40,
+
 
     maxDevicePixelRatio: 1.5,
 
