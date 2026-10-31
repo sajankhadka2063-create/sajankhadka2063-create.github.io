@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <!-- =========================================================
        SAJAN KHADKA — PROFESSIONAL PERSONAL PORTFOLIO
@@ -18,17 +19,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Sajan Khadka is an aspiring Full-Stack Developer and Canva Graphic Designer from Nepal. Explore web development projects, creative graphic designs, education, skills and digital services."
-  >
+  <!-- =========================================================
+       PRIMARY SEO
+  ========================================================== -->
+
+  <title>Sajan Khadka | Full-Stack Developer & Graphic Designer</title>
 
   <meta
-    name="keywords"
-    content="Sajan Khadka, Web Developer Nepal, Graphic Designer Nepal, Canva Designer, Portfolio Website, Logo Design, Social Media Graphics, YouTube Thumbnails, Frontend Developer"
+    name="description"
+    content="Explore the portfolio of Sajan Khadka, an aspiring Full-Stack Developer and Canva Graphic Designer from Nepal. Discover web projects, graphic designs, skills and creative services."
   >
 
   <meta name="author" content="Sajan Khadka">
+  <meta name="application-name" content="Sajan Khadka">
   <meta name="theme-color" content="#080d1b">
   <meta name="robots" content="index, follow">
 
@@ -37,19 +40,22 @@
     href="https://sajankhadka2063-create.github.io/"
   >
 
-  <!-- SOCIAL MEDIA PREVIEW -->
+  <!-- =========================================================
+       OPEN GRAPH — SOCIAL MEDIA PREVIEW
+  ========================================================== -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sajan Khadka">
 
   <meta
     property="og:title"
-    content="Sajan Khadka | Developer & Graphic Designer"
+    content="Sajan Khadka | Full-Stack Developer & Graphic Designer"
   >
 
   <meta
     property="og:description"
-    content="Explore web development projects, graphic designs and creative digital services by Sajan Khadka."
+    content="Explore web development projects, Canva graphic designs and creative digital services by Sajan Khadka from Nepal."
   >
-
-  <meta property="og:type" content="website">
 
   <meta
     property="og:url"
@@ -61,16 +67,78 @@
     content="https://sajankhadka2063-create.github.io/assets/images/sajan.png.png"
   >
 
-  <meta
-    property="og:site_name"
-    content="Sajan Khadka Portfolio"
-  >
+  <!-- =========================================================
+       TWITTER / X PREVIEW
+  ========================================================== -->
 
   <meta name="twitter:card" content="summary_large_image">
 
-  <title>Sajan Khadka | Full-Stack Developer & Graphic Designer</title>
+  <meta
+    name="twitter:title"
+    content="Sajan Khadka | Developer & Graphic Designer"
+  >
 
-  <!-- FAVICON -->
+  <meta
+    name="twitter:description"
+    content="Explore the portfolio, projects and creative work of Sajan Khadka."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://sajankhadka2063-create.github.io/assets/images/sajan.png.png"
+  >
+
+  <!-- =========================================================
+       WEBSITE STRUCTURED DATA
+  ========================================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://sajankhadka2063-create.github.io/#website",
+    "name": "Sajan Khadka",
+    "alternateName": "Sajan Khadka Portfolio",
+    "url": "https://sajankhadka2063-create.github.io/",
+    "description": "Official portfolio of Sajan Khadka, an aspiring Full-Stack Developer and Canva Graphic Designer from Nepal.",
+    "inLanguage": ["en", "ne"]
+  }
+  </script>
+
+  <!-- =========================================================
+       PERSON STRUCTURED DATA
+  ========================================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://sajankhadka2063-create.github.io/#person",
+    "name": "Sajan Khadka",
+    "url": "https://sajankhadka2063-create.github.io/",
+    "image": "https://sajankhadka2063-create.github.io/assets/images/sajan.png.png",
+    "jobTitle": "Aspiring Full-Stack Developer and Graphic Designer",
+    "description": "Aspiring Full-Stack Developer and Canva Graphic Designer from Nepal.",
+    "knowsAbout": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Frontend Development",
+      "Web Development",
+      "Canva",
+      "Graphic Design",
+      "Logo Design",
+      "Social Media Design"
+    ],
+    "mainEntityOfPage": {
+      "@id": "https://sajankhadka2063-create.github.io/#website"
+    }
+  }
+  </script>
+
+  <!-- =========================================================
+       FAVICON
+  ========================================================== -->
 
   <link
     rel="icon"
@@ -78,7 +146,9 @@
     href="assets/images/sajan.png.png"
   >
 
-  <!-- GOOGLE FONTS -->
+  <!-- =========================================================
+       GOOGLE FONTS
+  ========================================================== -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -547,56 +617,64 @@
       }
 
     }
+
     /* Gallery and reviews visibility fix */
 
-#designs {
-  display: block;
-}
+    #designs {
+      display: block;
+    }
 
-#designsGrid {
-  display: grid;
-  opacity: 1;
-  visibility: visible;
-}
+    #designsGrid {
+      display: grid;
+      opacity: 1;
+      visibility: visible;
+    }
 
-#designsGrid .design-card {
-  opacity: 1;
-  visibility: visible;
-}
+    #designsGrid .design-card {
+      opacity: 1;
+      visibility: visible;
+    }
 
-#reviews {
-  display: block;
-}
+    #reviews {
+      display: block;
+    }
 
-#reviews .reviews-empty-card:not([hidden]) {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  transform: none;
-}
+    #reviews .reviews-empty-card:not([hidden]) {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
 
-#reviewsGrid:empty {
-  display: none;
-}
+    #reviewsGrid:empty {
+      display: none;
+    }
 
-.design-lightbox[hidden],
-.reviews-empty-card[hidden] {
-  display: none !important;
-}
+    .design-lightbox[hidden],
+    .reviews-empty-card[hidden] {
+      display: none !important;
+    }
 
   </style>
 
-<script src="supabase-config.js" defer></script>
- <script src="translations.js" defer></script>
-<script src="assets/data/designs.js" defer></script>
-<script src="script.js" defer></script>
-<script src="particles.js" defer></script>
-<script src="transition.js" defer></script>
-<script src="supabase-reviews.js" defer></script>
+  <!-- =========================================================
+       JAVASCRIPT FILES
+       Original loading order preserved
+  ========================================================== -->
 
-<!-- Gallery and reviews compatibility fix -->
-<script src="gallery-fix.js" defer></script>
+  <script src="supabase-config.js" defer></script>
+  <script src="translations.js" defer></script>
+  <script src="assets/data/designs.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="particles.js" defer></script>
+  <script src="transition.js" defer></script>
+  <script src="supabase-reviews.js" defer></script>
+
+  <!-- Gallery and reviews compatibility fix -->
+  <script src="gallery-fix.js" defer></script>
+
 </head>
+
 
 <body>
 
