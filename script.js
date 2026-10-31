@@ -1337,7 +1337,7 @@
         ];
     }
 
-    /* ========================================================
+       /* ========================================================
        18. CATEGORY FILTER LABELS
     ======================================================== */
 
@@ -1354,6 +1354,44 @@
         }
 
         const translatedLabels = {
+
+            // NEW CATEGORY 01
+            "motion-graphics": {
+                en: "Motion Graphics & Advertising",
+                ne: "मोशन ग्राफिक्स तथा विज्ञापन"
+            },
+
+            // NEW CATEGORY 02
+            "brand-identity": {
+                en: "Brand Identity & Promotional Design",
+                ne: "ब्रान्ड पहिचान तथा प्रचार डिजाइन"
+            },
+
+            // NEW CATEGORY 03
+            "youtube-thumbnails": {
+                en: "YouTube Thumbnail Design",
+                ne: "युट्युब थम्बनेल डिजाइन"
+            },
+
+            // NEW CATEGORY 04
+            "finance-business": {
+                en: "Finance & Business Graphics",
+                ne: "वित्त तथा व्यवसाय ग्राफिक्स"
+            },
+
+            // NEW CATEGORY 05
+            "food-beverage": {
+                en: "Food & Beverage Advertisement",
+                ne: "खाना तथा पेय पदार्थ विज्ञापन"
+            },
+
+            // NEW CATEGORY 06
+            "posters-artwork": {
+                en: "Poster & Creative Artwork",
+                ne: "पोस्टर तथा सिर्जनात्मक कलाकृति"
+            },
+
+            // OLD CATEGORY SUPPORT
             branding: {
                 en: "Branding",
                 ne: "ब्रान्डिङ"
@@ -1403,12 +1441,14 @@
         const key = normalizeCategory(category);
 
         if (translatedLabels[key]) {
-            return translatedLabels[key][state.language];
+            return (
+                translatedLabels[key][state.language] ||
+                translatedLabels[key].en
+            );
         }
 
         return category;
     }
-
     /* ========================================================
        19. AUTOMATIC GALLERY FILTERS
     ======================================================== */

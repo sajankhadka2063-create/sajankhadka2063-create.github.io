@@ -2,22 +2,20 @@
 /* ============================================================
    SAJAN KHADKA — GRAPHIC DESIGN PORTFOLIO
    File: assets/data/designs.js
-   Version: 4.0
+   Version: 5.0
 
-   TOTAL DESIGNS: 31
-   TOTAL CATEGORIES: 7
+   TOTAL DESIGNS: 39
+   TOTAL CATEGORIES: 6
 
    CATEGORY BREAKDOWN
-   01. Branding         6
-   02. Editorial        3
-   03. Festivals        2
-   04. Invitations      4
-   05. Logos            5
-   06. Social Media     6
-   07. Thumbnails       5
+   01. Motion Graphics & Advertising    8
+   02. Brand Identity & Promotional     5
+   03. YouTube Thumbnail Design         8
+   04. Finance & Business Graphics      3
+   05. Food & Beverage Advertisement    7
+   06. Poster & Creative Artwork        8
 
    FEATURES
-   - Original image filenames preserved
    - English and Nepali titles
    - English and Nepali descriptions
    - Stable numeric design IDs
@@ -25,11 +23,10 @@
    - Canva software metadata
    - Global data access
    - Data validation
-   - No duplicate initialization
+   - Automatic category counts
 
    IMPORTANT
-   All image paths are relative to index.html,
-   not to this JavaScript file.
+   All image paths are relative to index.html.
 ============================================================ */
 
 "use strict";
@@ -40,46 +37,40 @@
 
 const portfolioCategories = [
     {
-        id: "branding",
-        nameEn: "Branding",
-        nameNe: "ब्रान्डिङ",
+        id: "motion-graphics",
+        nameEn: "Motion Graphics & Advertising",
+        nameNe: "मोशन ग्राफिक्स तथा विज्ञापन",
+        icon: "fa-film"
+    },
+    {
+        id: "brand-identity",
+        nameEn: "Brand Identity & Promotional Design",
+        nameNe: "ब्रान्ड पहिचान तथा प्रचार डिजाइन",
         icon: "fa-briefcase"
     },
     {
-        id: "editorial",
-        nameEn: "Editorial",
-        nameNe: "सम्पादकीय",
-        icon: "fa-newspaper"
-    },
-    {
-        id: "festivals",
-        nameEn: "Festivals",
-        nameNe: "चाडपर्व",
-        icon: "fa-gift"
-    },
-    {
-        id: "invitations",
-        nameEn: "Invitations",
-        nameNe: "निमन्त्रणा",
-        icon: "fa-envelope-open-text"
-    },
-    {
-        id: "logos",
-        nameEn: "Logos",
-        nameNe: "लोगो",
-        icon: "fa-pen-nib"
-    },
-    {
-        id: "social-media",
-        nameEn: "Social Media",
-        nameNe: "सामाजिक सञ्जाल",
-        icon: "fa-share-nodes"
-    },
-    {
-        id: "thumbnails",
-        nameEn: "YouTube Thumbnails",
-        nameNe: "युट्युब थम्बनेल",
+        id: "youtube-thumbnails",
+        nameEn: "YouTube Thumbnail Design",
+        nameNe: "युट्युब थम्बनेल डिजाइन",
         icon: "fa-youtube"
+    },
+    {
+        id: "finance-business",
+        nameEn: "Finance & Business Graphics",
+        nameNe: "वित्त तथा व्यवसाय ग्राफिक्स",
+        icon: "fa-chart-line"
+    },
+    {
+        id: "food-beverage",
+        nameEn: "Food & Beverage Advertisement",
+        nameNe: "खाना तथा पेय पदार्थ विज्ञापन",
+        icon: "fa-utensils"
+    },
+    {
+        id: "posters-artwork",
+        nameEn: "Poster & Creative Artwork",
+        nameNe: "पोस्टर तथा सिर्जनात्मक कलाकृति",
+        icon: "fa-image"
     }
 ];
 
@@ -90,874 +81,578 @@ const portfolioCategories = [
 const portfolioDesigns = [
 
     /* ========================================================
-       CATEGORY 01 — BRANDING
-       TOTAL: 6
+       CATEGORY 01 — MOTION GRAPHICS & ADVERTISING
+       TOTAL: 8
     ======================================================== */
 
     {
         id: 1,
-
-        title: "Professional Business Card",
-
-        titleEn: "Professional Business Card",
-        titleNe: "व्यावसायिक बिजनेस कार्ड",
-
-        category: "branding",
-
-        description:
-            "A professional business card design with a clean layout and modern typography.",
-
-        descriptionEn:
-            "A professional business card design with a clean layout and modern typography.",
-
-        descriptionNe:
-            "आधुनिक अक्षर शैली र आकर्षक लेआउटसहितको व्यावसायिक बिजनेस कार्ड।",
-
-        image:
-            "assets/designs/branding/Business Card.jpg",
-
-        alt: "Professional business card graphic design",
-
+        title: "Budget Offer Motion Campaign",
+        titleEn: "Budget Offer Motion Campaign",
+        titleNe: "बजेट अफर मोशन अभियान",
+        category: "motion-graphics",
+        description: "A promotional motion graphics campaign designed to present a budget-friendly offer.",
+        descriptionEn: "A promotional motion graphics campaign designed to present a budget-friendly offer.",
+        descriptionNe: "बजेटमैत्री अफर प्रस्तुत गर्न तयार गरिएको प्रचारात्मक मोशन ग्राफिक्स अभियान।",
+        image: "assets/designs/motion-graphics/budget-offer-motion.jpg",
+        alt: "Budget offer motion graphics campaign",
         software: "Canva"
     },
 
     {
         id: 2,
-
-        title: "Cafe Menu Design",
-
-        titleEn: "Cafe Menu Design",
-        titleNe: "क्याफे मेनु डिजाइन",
-
-        category: "branding",
-
-        description:
-            "A visually appealing cafe menu designed for easy reading.",
-
-        descriptionEn:
-            "A visually appealing cafe menu designed for easy reading.",
-
-        descriptionNe:
-            "ग्राहकले सजिलै पढ्न सक्ने आकर्षक क्याफे मेनु डिजाइन।",
-
-        image:
-            "assets/designs/branding/cafe menu.jpg",
-
-        alt: "Cafe menu graphic design",
-
+        title: "Creative Motion Advertisement",
+        titleEn: "Creative Motion Advertisement",
+        titleNe: "सिर्जनात्मक मोशन विज्ञापन",
+        category: "motion-graphics",
+        description: "A creative animated advertisement concept for digital promotion.",
+        descriptionEn: "A creative animated advertisement concept for digital promotion.",
+        descriptionNe: "डिजिटल प्रचारका लागि तयार गरिएको सिर्जनात्मक एनिमेटेड विज्ञापन।",
+        image: "assets/designs/motion-graphics/creative-motion-ad.jpg",
+        alt: "Creative motion advertisement",
         software: "Canva"
     },
 
     {
         id: 3,
-
-        title: "Coffee Menu Concept 1",
-
-        titleEn: "Coffee Menu Concept 1",
-        titleNe: "कफी मेनु डिजाइन १",
-
-        category: "branding",
-
-        description:
-            "A creative coffee menu layout for a modern cafe.",
-
-        descriptionEn:
-            "A creative coffee menu layout for a modern cafe.",
-
-        descriptionNe:
-            "आधुनिक क्याफेका लागि सिर्जनात्मक कफी मेनु।",
-
-        image:
-            "assets/designs/branding/coffee menu1.jpg",
-
-        alt: "Coffee menu concept one",
-
+        title: "Urban Streetwear Motion Intro",
+        titleEn: "Urban Streetwear Motion Intro",
+        titleNe: "अर्बन स्ट्रिटवेयर मोशन इन्ट्रो",
+        category: "motion-graphics",
+        description: "A dynamic motion intro concept inspired by urban streetwear fashion.",
+        descriptionEn: "A dynamic motion intro concept inspired by urban streetwear fashion.",
+        descriptionNe: "अर्बन स्ट्रिटवेयर फेसनबाट प्रेरित गतिशील मोशन इन्ट्रो।",
+        image: "assets/designs/motion-graphics/urban-streetwear-intro.jpg",
+        alt: "Urban streetwear motion intro",
         software: "Canva"
     },
 
     {
         id: 4,
-
-        title: "Coffee Menu Concept 2",
-
-        titleEn: "Coffee Menu Concept 2",
-        titleNe: "कफी मेनु डिजाइन २",
-
-        category: "branding",
-
-        description:
-            "An alternative coffee menu design with an organized presentation.",
-
-        descriptionEn:
-            "An alternative coffee menu design with an organized presentation.",
-
-        descriptionNe:
-            "व्यवस्थित प्रस्तुतिसहितको अर्को कफी मेनु डिजाइन।",
-
-        image:
-            "assets/designs/branding/coffee menu2.jpg",
-
-        alt: "Coffee menu concept two",
-
+        title: "Cozy Café Product Advertisement",
+        titleEn: "Cozy Café Product Advertisement",
+        titleNe: "आरामदायी क्याफे उत्पादन विज्ञापन",
+        category: "motion-graphics",
+        description: "A product advertisement concept created for a cozy café environment.",
+        descriptionEn: "A product advertisement concept created for a cozy café environment.",
+        descriptionNe: "क्याफेको वातावरण र उत्पादन प्रवर्द्धनका लागि तयार गरिएको विज्ञापन।",
+        image: "assets/designs/motion-graphics/cozy-cafe-ad.jpg",
+        alt: "Cozy cafe product advertisement",
         software: "Canva"
     },
 
     {
         id: 5,
-
-        title: "Corporate Marketing Flyer",
-
-        titleEn: "Corporate Marketing Flyer",
-        titleNe: "कर्पोरेट मार्केटिङ फ्लायर",
-
-        category: "branding",
-
-        description:
-            "A corporate promotional flyer for professional business communication.",
-
-        descriptionEn:
-            "A corporate promotional flyer for professional business communication.",
-
-        descriptionNe:
-            "व्यावसायिक प्रचारका लागि कर्पोरेट फ्लायर डिजाइन।",
-
-        image:
-            "assets/designs/branding/Corporate Flyer.jpg",
-
-        alt: "Corporate marketing flyer",
-
+        title: "Social Media Motion Campaign",
+        titleEn: "Social Media Motion Campaign",
+        titleNe: "सोसल मिडिया मोशन अभियान",
+        category: "motion-graphics",
+        description: "An engaging motion graphics concept for social media marketing.",
+        descriptionEn: "An engaging motion graphics concept for social media marketing.",
+        descriptionNe: "सामाजिक सञ्जाल मार्केटिङका लागि तयार गरिएको आकर्षक मोशन ग्राफिक्स।",
+        image: "assets/designs/motion-graphics/social-media-motion.jpg",
+        alt: "Social media motion campaign",
         software: "Canva"
     },
 
     {
         id: 6,
-
-        title: "Restaurant Menu Design",
-
-        titleEn: "Restaurant Menu Design",
-        titleNe: "रेस्टुरेन्ट मेनु डिजाइन",
-
-        category: "branding",
-
-        description:
-            "A restaurant menu layout with organized food information.",
-
-        descriptionEn:
-            "A restaurant menu layout with organized food information.",
-
-        descriptionNe:
-            "खानाका विवरणहरू व्यवस्थित रूपमा प्रस्तुत गरिएको रेस्टुरेन्ट मेनु।",
-
-        image:
-            "assets/designs/branding/restaurant-menu.png",
-
-        alt: "Restaurant menu design",
-
+        title: "High-Impact Promotional Campaign",
+        titleEn: "High-Impact Promotional Campaign",
+        titleNe: "प्रभावशाली प्रचार अभियान",
+        category: "motion-graphics",
+        description: "A bold promotional campaign designed to capture audience attention.",
+        descriptionEn: "A bold promotional campaign designed to capture audience attention.",
+        descriptionNe: "दर्शकको ध्यान आकर्षित गर्न तयार गरिएको प्रभावशाली प्रचार अभियान।",
+        image: "assets/designs/motion-graphics/high-impact-promotion.jpg",
+        alt: "High impact promotional campaign",
         software: "Canva"
     },
 
-    /* ========================================================
-       CATEGORY 02 — EDITORIAL
-       TOTAL: 3
-    ======================================================== */
-
     {
         id: 7,
-
-        title: "Aesthetic Editorial Collage",
-
-        titleEn: "Aesthetic Editorial Collage",
-        titleNe: "सिर्जनात्मक सम्पादकीय कोलाज",
-
-        category: "editorial",
-
-        description:
-            "An aesthetic collage exploring visual composition and creative layout.",
-
-        descriptionEn:
-            "An aesthetic collage exploring visual composition and creative layout.",
-
-        descriptionNe:
-            "सिर्जनात्मक लेआउट र दृश्य संयोजन प्रस्तुत गर्ने कोलाज डिजाइन।",
-
-        image:
-            "assets/designs/editorial/aesthetic-collage.png",
-
-        alt: "Aesthetic editorial collage",
-
+        title: "Trending Social Media Campaign",
+        titleEn: "Trending Social Media Campaign",
+        titleNe: "ट्रेन्डिङ सामाजिक सञ्जाल अभियान",
+        category: "motion-graphics",
+        description: "A modern social media campaign concept inspired by digital trends.",
+        descriptionEn: "A modern social media campaign concept inspired by digital trends.",
+        descriptionNe: "डिजिटल ट्रेन्डबाट प्रेरित आधुनिक सामाजिक सञ्जाल अभियान।",
+        image: "assets/designs/motion-graphics/trending-social-campaign.jpg",
+        alt: "Trending social media campaign",
         software: "Canva"
     },
 
     {
         id: 8,
-
-        title: "Breaking News Graphic",
-
-        titleEn: "Breaking News Graphic",
-        titleNe: "ब्रेकिङ न्यूज ग्राफिक",
-
-        category: "editorial",
-
-        description:
-            "A breaking-news-style graphic designed for digital media.",
-
-        descriptionEn:
-            "A breaking-news-style graphic designed for digital media.",
-
-        descriptionNe:
-            "डिजिटल मिडियाका लागि तयार गरिएको ब्रेकिङ न्यूज शैलीको डिजाइन।",
-
-        image:
-            "assets/designs/editorial/breaking-news-post.png",
-
-        alt: "Breaking news editorial graphic",
-
-        software: "Canva"
-    },
-
-    {
-        id: 9,
-
-        title: "Nepal Flood News Graphic",
-
-        titleEn: "Nepal Flood News Graphic",
-        titleNe: "नेपाल बाढीसम्बन्धी समाचार ग्राफिक",
-
-        category: "editorial",
-
-        description:
-            "A news-style visual design covering a flood-related topic in Nepal.",
-
-        descriptionEn:
-            "A news-style visual design covering a flood-related topic in Nepal.",
-
-        descriptionNe:
-            "नेपालको बाढीसम्बन्धी विषय प्रस्तुत गर्ने समाचार शैलीको डिजाइन।",
-
-        image:
-            "assets/designs/editorial/nepal-flood-news.png",
-
-        alt: "Nepal flood news graphic",
-
+        title: "Digital Marketing Promotional Creative",
+        titleEn: "Digital Marketing Promotional Creative",
+        titleNe: "डिजिटल मार्केटिङ प्रचार सामग्री",
+        category: "motion-graphics",
+        description: "A digital marketing promotional creative for online brand communication.",
+        descriptionEn: "A digital marketing promotional creative for online brand communication.",
+        descriptionNe: "अनलाइन ब्रान्ड सञ्चार तथा प्रचारका लागि तयार गरिएको डिजिटल मार्केटिङ सामग्री।",
+        image: "assets/designs/motion-graphics/digital-marketing-creative.jpg",
+        alt: "Digital marketing promotional creative",
         software: "Canva"
     },
 
     /* ========================================================
-       CATEGORY 03 — FESTIVALS
-       TOTAL: 2
+       CATEGORY 02 — BRAND IDENTITY & PROMOTIONAL DESIGN
+       TOTAL: 5
     ======================================================== */
 
     {
+        id: 9,
+        title: "Brand Identity Campaign",
+        titleEn: "Brand Identity Campaign",
+        titleNe: "ब्रान्ड पहिचान अभियान",
+        category: "brand-identity",
+        description: "A visual branding campaign created to communicate a consistent brand identity.",
+        descriptionEn: "A visual branding campaign created to communicate a consistent brand identity.",
+        descriptionNe: "एकरूप ब्रान्ड पहिचान प्रस्तुत गर्न तयार गरिएको दृश्यात्मक ब्रान्डिङ अभियान।",
+        image: "assets/designs/brand-identity/brand-identity-campaign.jpg",
+        alt: "Brand identity campaign design",
+        software: "Canva"
+    },
+
+    {
         id: 10,
-
-        title: "Dashain 2083 Graphic Design Offer",
-
-        titleEn: "Dashain 2083 Graphic Design Offer",
-        titleNe: "दशैँ २०८३ ग्राफिक डिजाइन अफर",
-
-        category: "festivals",
-
-        description:
-            "A festive promotional graphic for a Dashain 2083 design offer.",
-
-        descriptionEn:
-            "A festive promotional graphic for a Dashain 2083 design offer.",
-
-        descriptionNe:
-            "दशैँ २०८३ को अवसरमा तयार गरिएको ग्राफिक डिजाइन अफर पोस्ट।",
-
-        image:
-            "assets/designs/festivals/Dashain 2083 Graphic Design Offer.png",
-
-        alt: "Dashain 2083 graphic design promotional offer",
-
+        title: "Digital Brand Promotion",
+        titleEn: "Digital Brand Promotion",
+        titleNe: "डिजिटल ब्रान्ड प्रचार",
+        category: "brand-identity",
+        description: "A promotional graphic designed for digital brand awareness.",
+        descriptionEn: "A promotional graphic designed for digital brand awareness.",
+        descriptionNe: "डिजिटल माध्यमबाट ब्रान्डको पहिचान बढाउन तयार गरिएको प्रचार डिजाइन।",
+        image: "assets/designs/brand-identity/digital-brand-promotion.jpg",
+        alt: "Digital brand promotion design",
         software: "Canva"
     },
 
     {
         id: 11,
-
-        title: "Traditional Dashain Greeting",
-
-        titleEn: "Traditional Dashain Greeting",
-        titleNe: "परम्परागत दशैँ शुभकामना",
-
-        category: "festivals",
-
-        description:
-            "A Dashain greeting design featuring a traditional thali and jamara.",
-
-        descriptionEn:
-            "A Dashain greeting design featuring a traditional thali and jamara.",
-
-        descriptionNe:
-            "परम्परागत थाली र जमरा समावेश गरिएको दशैँ शुभकामना डिजाइन।",
-
-        image:
-            "assets/designs/festivals/Festive Dashain Greeting with Thali and Jamara.png",
-
-        alt: "Traditional Dashain greeting with thali and jamara",
-
+        title: "Digital Marketing Course Advertisement",
+        titleEn: "Digital Marketing Course Advertisement",
+        titleNe: "डिजिटल मार्केटिङ कोर्स विज्ञापन",
+        category: "brand-identity",
+        description: "A course advertisement concept for digital marketing education and promotion.",
+        descriptionEn: "A course advertisement concept for digital marketing education and promotion.",
+        descriptionNe: "डिजिटल मार्केटिङ शिक्षा तथा प्रचारका लागि तयार गरिएको कोर्स विज्ञापन।",
+        image: "assets/designs/brand-identity/digital-marketing-course.jpg",
+        alt: "Digital marketing course advertisement",
         software: "Canva"
     },
 
-    /* ========================================================
-       CATEGORY 04 — INVITATIONS
-       TOTAL: 4
-    ======================================================== */
-
     {
         id: 12,
-
-        title: "Birthday Invitation Design 1",
-
-        titleEn: "Birthday Invitation Design 1",
-        titleNe: "जन्मदिन निमन्त्रणा डिजाइन १",
-
-        category: "invitations",
-
-        description:
-            "A colorful birthday invitation concept.",
-
-        descriptionEn:
-            "A colorful birthday invitation concept.",
-
-        descriptionNe:
-            "जन्मदिनको कार्यक्रमका लागि रंगीन निमन्त्रणा डिजाइन।",
-
-        image:
-            "assets/designs/invitations/Birthday Invitation 1.jpg",
-
-        alt: "Birthday invitation design one",
-
+        title: "Affiliate Marketing Infographic",
+        titleEn: "Affiliate Marketing Infographic",
+        titleNe: "एफिलिएट मार्केटिङ इन्फोग्राफिक",
+        category: "brand-identity",
+        description: "An infographic explaining affiliate marketing through visual information.",
+        descriptionEn: "An infographic explaining affiliate marketing through visual information.",
+        descriptionNe: "दृश्यात्मक जानकारीमार्फत एफिलिएट मार्केटिङ प्रस्तुत गर्ने इन्फोग्राफिक।",
+        image: "assets/designs/brand-identity/affiliate-marketing-infographic.jpg",
+        alt: "Affiliate marketing infographic",
         software: "Canva"
     },
 
     {
         id: 13,
-
-        title: "Birthday Invitation Design 2",
-
-        titleEn: "Birthday Invitation Design 2",
-        titleNe: "जन्मदिन निमन्त्रणा डिजाइन २",
-
-        category: "invitations",
-
-        description:
-            "An alternative birthday invitation with a festive presentation.",
-
-        descriptionEn:
-            "An alternative birthday invitation with a festive presentation.",
-
-        descriptionNe:
-            "उत्सवमय शैलीमा तयार गरिएको अर्को जन्मदिन निमन्त्रणा।",
-
-        image:
-            "assets/designs/invitations/Birthday Invitation 2.jpg",
-
-        alt: "Birthday invitation design two",
-
+        title: "Graphic Design Service Advertisement",
+        titleEn: "Graphic Design Service Advertisement",
+        titleNe: "ग्राफिक डिजाइन सेवा विज्ञापन",
+        category: "brand-identity",
+        description: "A promotional design showcasing graphic design services.",
+        descriptionEn: "A promotional design showcasing graphic design services.",
+        descriptionNe: "ग्राफिक डिजाइन सेवाहरू प्रस्तुत गर्न तयार गरिएको प्रचार सामग्री।",
+        image: "assets/designs/brand-identity/graphic-design-service.jpg",
+        alt: "Graphic design service advertisement",
         software: "Canva"
     },
 
+    /* ========================================================
+       CATEGORY 03 — YOUTUBE THUMBNAIL DESIGN
+       TOTAL: 8
+    ======================================================== */
+
     {
         id: 14,
-
-        title: "Traditional Invitation",
-
-        titleEn: "Traditional Invitation",
-        titleNe: "परम्परागत निमन्त्रणा",
-
-        category: "invitations",
-
-        description:
-            "An invitation design inspired by traditional decorative elements.",
-
-        descriptionEn:
-            "An invitation design inspired by traditional decorative elements.",
-
-        descriptionNe:
-            "परम्परागत सजावटबाट प्रेरित निमन्त्रणा डिजाइन।",
-
-        image:
-            "assets/designs/invitations/Traditional Invitation.jpg",
-
-        alt: "Traditional invitation graphic design",
-
+        title: "Historical Documentary Thumbnail",
+        titleEn: "Historical Documentary Thumbnail",
+        titleNe: "ऐतिहासिक वृत्तचित्र थम्बनेल",
+        category: "youtube-thumbnails",
+        description: "A documentary thumbnail concept designed around a historical topic.",
+        descriptionEn: "A documentary thumbnail concept designed around a historical topic.",
+        descriptionNe: "ऐतिहासिक विषयलाई केन्द्रमा राखेर तयार गरिएको वृत्तचित्र थम्बनेल।",
+        image: "assets/designs/youtube-thumbnails/historical-documentary.jpg",
+        alt: "Historical documentary YouTube thumbnail",
         software: "Canva"
     },
 
     {
         id: 15,
-
-        title: "Wedding Invitation",
-
-        titleEn: "Wedding Invitation",
-        titleNe: "विवाह निमन्त्रणा",
-
-        category: "invitations",
-
-        description:
-            "An elegant wedding invitation design concept.",
-
-        descriptionEn:
-            "An elegant wedding invitation design concept.",
-
-        descriptionNe:
-            "विवाह समारोहका लागि आकर्षक निमन्त्रणा डिजाइन।",
-
-        image:
-            "assets/designs/invitations/Wedding Invitation.jpg",
-
-        alt: "Elegant wedding invitation",
-
+        title: "Gaming YouTube Thumbnail",
+        titleEn: "Gaming YouTube Thumbnail",
+        titleNe: "गेमिङ युट्युब थम्बनेल",
+        category: "youtube-thumbnails",
+        description: "An energetic gaming thumbnail concept for video content.",
+        descriptionEn: "An energetic gaming thumbnail concept for video content.",
+        descriptionNe: "गेमिङ भिडियो सामग्रीका लागि तयार गरिएको आकर्षक थम्बनेल।",
+        image: "assets/designs/youtube-thumbnails/gaming-gta6-thumbnail.jpg",
+        alt: "Gaming YouTube thumbnail",
         software: "Canva"
     },
 
-    /* ========================================================
-       CATEGORY 05 — LOGOS
-       TOTAL: 5
-    ======================================================== */
-
     {
         id: 16,
-
-        title: "Cafe Logo Concept 1",
-
-        titleEn: "Cafe Logo Concept 1",
-        titleNe: "क्याफे लोगो डिजाइन १",
-
-        category: "logos",
-
-        description:
-            "A creative logo concept for a cafe brand.",
-
-        descriptionEn:
-            "A creative logo concept for a cafe brand.",
-
-        descriptionNe:
-            "क्याफे ब्रान्डका लागि सिर्जनात्मक लोगो अवधारणा।",
-
-        image:
-            "assets/designs/logos/Cafe Logo 1.jpg",
-
-        alt: "Cafe logo concept one",
-
+        title: "Business YouTube Thumbnail",
+        titleEn: "Business YouTube Thumbnail",
+        titleNe: "व्यवसायसम्बन्धी युट्युब थम्बनेल",
+        category: "youtube-thumbnails",
+        description: "A business-focused thumbnail concept for educational or informational videos.",
+        descriptionEn: "A business-focused thumbnail concept for educational or informational videos.",
+        descriptionNe: "शैक्षिक तथा जानकारीमूलक व्यवसायसम्बन्धी भिडियोका लागि थम्बनेल।",
+        image: "assets/designs/youtube-thumbnails/business-thumbnail.jpg",
+        alt: "Business YouTube thumbnail",
         software: "Canva"
     },
 
     {
         id: 17,
-
-        title: "Cafe Logo Concept 2",
-
-        titleEn: "Cafe Logo Concept 2",
-        titleNe: "क्याफे लोगो डिजाइन २",
-
-        category: "logos",
-
-        description:
-            "An alternative visual identity concept for a cafe.",
-
-        descriptionEn:
-            "An alternative visual identity concept for a cafe.",
-
-        descriptionNe:
-            "क्याफेका लागि अर्को आकर्षक लोगो डिजाइन।",
-
-        image:
-            "assets/designs/logos/Cafe Logo 2.jpg",
-
-        alt: "Cafe logo concept two",
-
+        title: "Creative YouTube Thumbnail",
+        titleEn: "Creative YouTube Thumbnail",
+        titleNe: "सिर्जनात्मक युट्युब थम्बनेल",
+        category: "youtube-thumbnails",
+        description: "A creative thumbnail design for engaging video presentation.",
+        descriptionEn: "A creative thumbnail design for engaging video presentation.",
+        descriptionNe: "भिडियो प्रस्तुति आकर्षक बनाउन तयार गरिएको सिर्जनात्मक थम्बनेल।",
+        image: "assets/designs/youtube-thumbnails/creative-youtube-thumbnail.jpg",
+        alt: "Creative YouTube thumbnail",
         software: "Canva"
     },
 
     {
         id: 18,
-
-        title: "Corporate Logo",
-
-        titleEn: "Corporate Logo",
-        titleNe: "कर्पोरेट लोगो",
-
-        category: "logos",
-
-        description:
-            "A modern logo concept for a corporate business.",
-
-        descriptionEn:
-            "A modern logo concept for a corporate business.",
-
-        descriptionNe:
-            "कर्पोरेट व्यवसायका लागि आधुनिक लोगो अवधारणा।",
-
-        image:
-            "assets/designs/logos/Corporate Logo.jpg",
-
-        alt: "Corporate logo design",
-
+        title: "Professional Thumbnail Concept",
+        titleEn: "Professional Thumbnail Concept",
+        titleNe: "व्यावसायिक थम्बनेल अवधारणा",
+        category: "youtube-thumbnails",
+        description: "A professional thumbnail concept with a clear visual presentation.",
+        descriptionEn: "A professional thumbnail concept with a clear visual presentation.",
+        descriptionNe: "स्पष्ट दृश्य प्रस्तुतिसहित तयार गरिएको व्यावसायिक थम्बनेल अवधारणा।",
+        image: "assets/designs/youtube-thumbnails/professional-thumbnail.jpg",
+        alt: "Professional thumbnail concept",
         software: "Canva"
     },
 
     {
         id: 19,
-
-        title: "Monogram Logo",
-
-        titleEn: "Monogram Logo",
-        titleNe: "मोनोग्राम लोगो",
-
-        category: "logos",
-
-        description:
-            "A monogram-style logo exploring letter-based branding.",
-
-        descriptionEn:
-            "A monogram-style logo exploring letter-based branding.",
-
-        descriptionNe:
-            "अक्षरहरूको संयोजनबाट तयार गरिएको मोनोग्राम लोगो।",
-
-        image:
-            "assets/designs/logos/Monogram Logo.jpg",
-
-        alt: "Monogram logo concept",
-
+        title: "Viral Content Thumbnail",
+        titleEn: "Viral Content Thumbnail",
+        titleNe: "भाइरल सामग्री थम्बनेल",
+        category: "youtube-thumbnails",
+        description: "A bold thumbnail concept designed for attention-grabbing video content.",
+        descriptionEn: "A bold thumbnail concept designed for attention-grabbing video content.",
+        descriptionNe: "दर्शकको ध्यान आकर्षित गर्ने भिडियो सामग्रीका लागि तयार गरिएको थम्बनेल।",
+        image: "assets/designs/youtube-thumbnails/viral-content-thumbnail.jpg",
+        alt: "Viral content thumbnail",
         software: "Canva"
     },
 
     {
         id: 20,
+        title: "YouTube Shorts Thumbnail",
+        titleEn: "YouTube Shorts Thumbnail",
+        titleNe: "युट्युब शर्ट्स थम्बनेल",
+        category: "youtube-thumbnails",
+        description: "A thumbnail concept designed for short-form video content.",
+        descriptionEn: "A thumbnail concept designed for short-form video content.",
+        descriptionNe: "छोटो भिडियो सामग्रीका लागि तयार गरिएको थम्बनेल अवधारणा।",
+        image: "assets/designs/youtube-thumbnails/youtube-shorts-thumbnail.jpg",
+        alt: "YouTube Shorts thumbnail",
+        software: "Canva"
+    },
 
-        title: "Technology Logo",
-
-        titleEn: "Technology Logo",
-        titleNe: "प्रविधि लोगो",
-
-        category: "logos",
-
-        description:
-            "A modern technology-inspired logo concept.",
-
-        descriptionEn:
-            "A modern technology-inspired logo concept.",
-
-        descriptionNe:
-            "आधुनिक प्रविधिबाट प्रेरित लोगो डिजाइन।",
-
-        image:
-            "assets/designs/logos/Tech Logo.jpg",
-
-        alt: "Technology-inspired logo",
-
+    {
+        id: 21,
+        title: "Finance & Business Thumbnail",
+        titleEn: "Finance & Business Thumbnail",
+        titleNe: "वित्त तथा व्यवसाय थम्बनेल",
+        category: "youtube-thumbnails",
+        description: "A finance and business themed thumbnail for online video content.",
+        descriptionEn: "A finance and business themed thumbnail for online video content.",
+        descriptionNe: "अनलाइन भिडियो सामग्रीका लागि वित्त तथा व्यवसाय विषयक थम्बनेल।",
+        image: "assets/designs/youtube-thumbnails/finance-business-thumbnail.jpg",
+        alt: "Finance and business thumbnail",
         software: "Canva"
     },
 
     /* ========================================================
-       CATEGORY 06 — SOCIAL MEDIA
-       TOTAL: 6
+       CATEGORY 04 — FINANCE & BUSINESS GRAPHICS
+       TOTAL: 3
     ======================================================== */
 
     {
-        id: 21,
-
-        title: "Burger Promotion",
-
-        titleEn: "Burger Promotion",
-        titleNe: "बर्गर प्रचार डिजाइन",
-
-        category: "social-media",
-
-        description:
-            "A promotional graphic for a burger or fast-food business.",
-
-        descriptionEn:
-            "A promotional graphic for a burger or fast-food business.",
-
-        descriptionNe:
-            "बर्गर तथा फास्टफुड व्यवसायका लागि प्रचार डिजाइन।",
-
-        image:
-            "assets/designs/social-media/burger-promotion.png",
-
-        alt: "Burger promotional graphic",
-
-        software: "Canva"
-    },
-
-    {
         id: 22,
-
-        title: "Marketing Banner Design 1",
-
-        titleEn: "Marketing Banner Design 1",
-        titleNe: "मार्केटिङ ब्यानर डिजाइन १",
-
-        category: "social-media",
-
-        description:
-            "A digital marketing banner with a promotional layout.",
-
-        descriptionEn:
-            "A digital marketing banner with a promotional layout.",
-
-        descriptionNe:
-            "प्रचारका लागि तयार गरिएको डिजिटल मार्केटिङ ब्यानर।",
-
-        image:
-            "assets/designs/social-media/Marketing Banner 1.jpg",
-
-        alt: "Marketing banner design one",
-
+        title: "Investment & Wealth Management Poster",
+        titleEn: "Investment & Wealth Management Poster",
+        titleNe: "लगानी तथा सम्पत्ति व्यवस्थापन पोस्टर",
+        category: "finance-business",
+        description: "A finance-themed poster concept focused on investment and wealth management.",
+        descriptionEn: "A finance-themed poster concept focused on investment and wealth management.",
+        descriptionNe: "लगानी तथा सम्पत्ति व्यवस्थापन विषयमा तयार गरिएको वित्तीय पोस्टर।",
+        image: "assets/designs/finance-business/investment-wealth-poster.jpg",
+        alt: "Investment and wealth management poster",
         software: "Canva"
     },
 
     {
         id: 23,
-
-        title: "Marketing Banner Design 2",
-
-        titleEn: "Marketing Banner Design 2",
-        titleNe: "मार्केटिङ ब्यानर डिजाइन २",
-
-        category: "social-media",
-
-        description:
-            "An alternative promotional banner for social media marketing.",
-
-        descriptionEn:
-            "An alternative promotional banner for social media marketing.",
-
-        descriptionNe:
-            "सामाजिक सञ्जाल प्रचारका लागि अर्को ब्यानर डिजाइन।",
-
-        image:
-            "assets/designs/social-media/Marketing Banner 2.jpg",
-
-        alt: "Marketing banner design two",
-
+        title: "Trading & Investment Poster",
+        titleEn: "Trading & Investment Poster",
+        titleNe: "ट्रेडिङ तथा लगानी पोस्टर",
+        category: "finance-business",
+        description: "A promotional poster concept based on trading and investment.",
+        descriptionEn: "A promotional poster concept based on trading and investment.",
+        descriptionNe: "ट्रेडिङ तथा लगानी विषयमा आधारित प्रचारात्मक पोस्टर।",
+        image: "assets/designs/finance-business/trading-investment-poster.jpg",
+        alt: "Trading and investment poster",
         software: "Canva"
     },
 
     {
         id: 24,
-
-        title: "Restaurant Food Poster",
-
-        titleEn: "Restaurant Food Poster",
-        titleNe: "रेस्टुरेन्ट खाना पोस्टर",
-
-        category: "social-media",
-
-        description:
-            "A food promotion poster designed for restaurant marketing.",
-
-        descriptionEn:
-            "A food promotion poster designed for restaurant marketing.",
-
-        descriptionNe:
-            "रेस्टुरेन्टको खाना प्रचारका लागि तयार गरिएको पोस्टर।",
-
-        image:
-            "assets/designs/social-media/restaurant-food-poster.png",
-
-        alt: "Restaurant food promotion poster",
-
+        title: "Success & Motivation Poster",
+        titleEn: "Success & Motivation Poster",
+        titleNe: "सफलता तथा प्रेरणादायी पोस्टर",
+        category: "finance-business",
+        description: "A motivational poster concept communicating success and ambition.",
+        descriptionEn: "A motivational poster concept communicating success and ambition.",
+        descriptionNe: "सफलता र महत्वाकांक्षा प्रस्तुत गर्ने प्रेरणादायी पोस्टर।",
+        image: "assets/designs/finance-business/success-motivation-poster.jpg",
+        alt: "Success and motivation poster",
         software: "Canva"
     },
 
+    /* ========================================================
+       CATEGORY 05 — FOOD & BEVERAGE ADVERTISEMENT
+       TOTAL: 7
+    ======================================================== */
+
     {
         id: 25,
-
-        title: "Seafood Promotion",
-
-        titleEn: "Seafood Promotion",
-        titleNe: "समुद्री खाना प्रचार डिजाइन",
-
-        category: "social-media",
-
-        description:
-            "A seafood promotional design for a restaurant or food brand.",
-
-        descriptionEn:
-            "A seafood promotional design for a restaurant or food brand.",
-
-        descriptionNe:
-            "समुद्री खानाको प्रचारका लागि तयार गरिएको डिजाइन।",
-
-        image:
-            "assets/designs/social-media/seafood-promotion.png.png",
-
-        alt: "Seafood promotional graphic",
-
+        title: "Pistachio Frappe Product Advertisement",
+        titleEn: "Pistachio Frappe Product Advertisement",
+        titleNe: "पिस्ता फ्रापे उत्पादन विज्ञापन",
+        category: "food-beverage",
+        description: "A product advertisement concept featuring a pistachio frappe.",
+        descriptionEn: "A product advertisement concept featuring a pistachio frappe.",
+        descriptionNe: "पिस्ता फ्रापे उत्पादन प्रस्तुत गर्ने विज्ञापन डिजाइन।",
+        image: "assets/designs/food-beverage/pistachio-frappe.jpg",
+        alt: "Pistachio frappe product advertisement",
         software: "Canva"
     },
 
     {
         id: 26,
-
-        title: "Social Media Banner",
-
-        titleEn: "Social Media Banner",
-        titleNe: "सामाजिक सञ्जाल ब्यानर",
-
-        category: "social-media",
-
-        description:
-            "A promotional banner concept for social media.",
-
-        descriptionEn:
-            "A promotional banner concept for social media.",
-
-        descriptionNe:
-            "सामाजिक सञ्जालमा प्रचारका लागि तयार गरिएको ब्यानर।",
-
-        image:
-            "assets/designs/social-media/Social Media Banner.jpg",
-
-        alt: "Social media promotional banner",
-
+        title: "Chocolate Milkshake Promotional Design",
+        titleEn: "Chocolate Milkshake Promotional Design",
+        titleNe: "चकलेट मिल्कशेक प्रचार डिजाइन",
+        category: "food-beverage",
+        description: "A promotional graphic concept featuring a chocolate milkshake.",
+        descriptionEn: "A promotional graphic concept featuring a chocolate milkshake.",
+        descriptionNe: "चकलेट मिल्कशेक प्रस्तुत गर्ने प्रचारात्मक ग्राफिक डिजाइन।",
+        image: "assets/designs/food-beverage/chocolate-milkshake.jpg",
+        alt: "Chocolate milkshake promotional design",
         software: "Canva"
     },
 
-    /* ========================================================
-       CATEGORY 07 — YOUTUBE THUMBNAILS
-       TOTAL: 5
-    ======================================================== */
-
     {
         id: 27,
-
-        title: "Diwali YouTube Thumbnail",
-
-        titleEn: "Diwali YouTube Thumbnail",
-        titleNe: "दिवाली YouTube थम्बनेल",
-
-        category: "thumbnails",
-
-        description:
-            "A festive YouTube thumbnail inspired by Diwali.",
-
-        descriptionEn:
-            "A festive YouTube thumbnail inspired by Diwali.",
-
-        descriptionNe:
-            "दिवाली पर्वबाट प्रेरित YouTube थम्बनेल।",
-
-        image:
-            "assets/designs/thumbnails/diwali-thumbnail.png",
-
-        alt: "Diwali YouTube thumbnail",
-
+        title: "Halloween Beverage Campaign",
+        titleEn: "Halloween Beverage Campaign",
+        titleNe: "हेलोविन पेय पदार्थ अभियान",
+        category: "food-beverage",
+        description: "A seasonal beverage campaign concept inspired by Halloween.",
+        descriptionEn: "A seasonal beverage campaign concept inspired by Halloween.",
+        descriptionNe: "हेलोविनबाट प्रेरित मौसमी पेय पदार्थ प्रचार अभियान।",
+        image: "assets/designs/food-beverage/halloween-fanta.jpg",
+        alt: "Halloween beverage campaign",
         software: "Canva"
     },
 
     {
         id: 28,
-
-        title: "Gaming YouTube Thumbnail",
-
-        titleEn: "Gaming YouTube Thumbnail",
-        titleNe: "गेमिङ YouTube थम्बनेल",
-
-        category: "thumbnails",
-
-        description:
-            "An energetic thumbnail design for gaming content.",
-
-        descriptionEn:
-            "An energetic thumbnail design for gaming content.",
-
-        descriptionNe:
-            "गेमिङ भिडियोका लागि आकर्षक थम्बनेल डिजाइन।",
-
-        image:
-            "assets/designs/thumbnails/Gaming Thumbnail.jpg",
-
-        alt: "Gaming YouTube thumbnail",
-
+        title: "Coca-Cola Inspired Beverage Advertisement",
+        titleEn: "Coca-Cola Inspired Beverage Advertisement",
+        titleNe: "कोका-कोला प्रेरित पेय विज्ञापन",
+        category: "food-beverage",
+        description: "A beverage advertisement concept inspired by Coca-Cola visual branding.",
+        descriptionEn: "A beverage advertisement concept inspired by Coca-Cola visual branding.",
+        descriptionNe: "कोका-कोलाको दृश्यात्मक ब्रान्डिङबाट प्रेरित पेय पदार्थ विज्ञापन।",
+        image: "assets/designs/food-beverage/coca-cola-advertisement.jpg",
+        alt: "Coca-Cola inspired beverage advertisement",
         software: "Canva"
     },
 
     {
         id: 29,
-
-        title: "Holi YouTube Thumbnail",
-
-        titleEn: "Holi YouTube Thumbnail",
-        titleNe: "होली YouTube थम्बनेल",
-
-        category: "thumbnails",
-
-        description:
-            "A colorful YouTube thumbnail inspired by the Holi festival.",
-
-        descriptionEn:
-            "A colorful YouTube thumbnail inspired by the Holi festival.",
-
-        descriptionNe:
-            "होली पर्वबाट प्रेरित रंगीन YouTube थम्बनेल।",
-
-        image:
-            "assets/designs/thumbnails/holi-thumbnail.png",
-
-        alt: "Holi festival YouTube thumbnail",
-
+        title: "Energy Drink Promotional Campaign",
+        titleEn: "Energy Drink Promotional Campaign",
+        titleNe: "इनर्जी ड्रिंक प्रचार अभियान",
+        category: "food-beverage",
+        description: "An energetic promotional campaign concept for an energy drink.",
+        descriptionEn: "An energetic promotional campaign concept for an energy drink.",
+        descriptionNe: "इनर्जी ड्रिंकका लागि तयार गरिएको ऊर्जाशील प्रचार अभियान।",
+        image: "assets/designs/food-beverage/monster-energy-campaign.jpg",
+        alt: "Energy drink promotional campaign",
         software: "Canva"
     },
 
     {
         id: 30,
-
-        title: "Travel Vlog Thumbnail",
-
-        titleEn: "Travel Vlog Thumbnail",
-        titleNe: "यात्रा भ्लग थम्बनेल",
-
-        category: "thumbnails",
-
-        description:
-            "A thumbnail concept for travel and adventure videos.",
-
-        descriptionEn:
-            "A thumbnail concept for travel and adventure videos.",
-
-        descriptionNe:
-            "यात्रा तथा साहसिक भिडियोका लागि थम्बनेल डिजाइन।",
-
-        image:
-            "assets/designs/thumbnails/travel-vlog-thumbnail.png.png",
-
-        alt: "Travel vlog YouTube thumbnail",
-
+        title: "Creative Beverage Concept Advertisement",
+        titleEn: "Creative Beverage Concept Advertisement",
+        titleNe: "सिर्जनात्मक पेय पदार्थ अवधारणा विज्ञापन",
+        category: "food-beverage",
+        description: "A creative visual advertisement concept for a beverage product.",
+        descriptionEn: "A creative visual advertisement concept for a beverage product.",
+        descriptionNe: "पेय पदार्थ उत्पादनका लागि तयार गरिएको सिर्जनात्मक दृश्यात्मक विज्ञापन।",
+        image: "assets/designs/food-beverage/creative-beverage-concept.jpg",
+        alt: "Creative beverage concept advertisement",
         software: "Canva"
     },
 
     {
         id: 31,
+        title: "Fast Food Promotional Flyer",
+        titleEn: "Fast Food Promotional Flyer",
+        titleNe: "फास्ट फुड प्रचार फ्लायर",
+        category: "food-beverage",
+        description: "A promotional flyer concept for a fast-food business.",
+        descriptionEn: "A promotional flyer concept for a fast-food business.",
+        descriptionNe: "फास्ट फुड व्यवसायका लागि तयार गरिएको प्रचारात्मक फ्लायर।",
+        image: "assets/designs/food-beverage/fast-food-flyer.jpg",
+        alt: "Fast food promotional flyer",
+        software: "Canva"
+    },
 
-        title: "Vlog YouTube Thumbnail",
+    /* ========================================================
+       CATEGORY 06 — POSTER & CREATIVE ARTWORK
+       TOTAL: 8
+    ======================================================== */
 
-        titleEn: "Vlog YouTube Thumbnail",
-        titleNe: "भ्लग YouTube थम्बनेल",
+    {
+        id: 32,
+        title: "Broken Prayer Typography Artwork",
+        titleEn: "Broken Prayer Typography Artwork",
+        titleNe: "ब्रोकन प्रेयर टाइपोग्राफी कलाकृति",
+        category: "posters-artwork",
+        description: "A typography-based creative artwork exploring expressive visual composition.",
+        descriptionEn: "A typography-based creative artwork exploring expressive visual composition.",
+        descriptionNe: "अभिव्यक्तिपूर्ण दृश्य संयोजन प्रस्तुत गर्ने टाइपोग्राफीमा आधारित कलाकृति।",
+        image: "assets/designs/posters-artwork/broken-prayer.jpg",
+        alt: "Broken Prayer typography artwork",
+        software: "Canva"
+    },
 
-        category: "thumbnails",
+    {
+        id: 33,
+        title: "Basantapur Heritage Poster",
+        titleEn: "Basantapur Heritage Poster",
+        titleNe: "बसन्तपुर सम्पदा पोस्टर",
+        category: "posters-artwork",
+        description: "A creative poster highlighting the heritage and visual identity of Basantapur.",
+        descriptionEn: "A creative poster highlighting the heritage and visual identity of Basantapur.",
+        descriptionNe: "बसन्तपुरको सम्पदा तथा दृश्यात्मक पहिचान प्रस्तुत गर्ने पोस्टर।",
+        image: "assets/designs/posters-artwork/basantapur-heritage.jpg",
+        alt: "Basantapur heritage poster",
+        software: "Canva"
+    },
 
-        description:
-            "A creative thumbnail design for personal vlog content.",
+    {
+        id: 34,
+        title: "Nepali Typography Artwork",
+        titleEn: "Nepali Typography Artwork",
+        titleNe: "नेपाली टाइपोग्राफी कलाकृति",
+        category: "posters-artwork",
+        description: "A creative artwork focused on Nepali typography and lettering.",
+        descriptionEn: "A creative artwork focused on Nepali typography and lettering.",
+        descriptionNe: "नेपाली अक्षर तथा टाइपोग्राफीमा केन्द्रित सिर्जनात्मक कलाकृति।",
+        image: "assets/designs/posters-artwork/nepali-typography.jpg",
+        alt: "Nepali typography artwork",
+        software: "Canva"
+    },
 
-        descriptionEn:
-            "A creative thumbnail design for personal vlog content.",
+    {
+        id: 35,
+        title: "Neymar Football Poster",
+        titleEn: "Neymar Football Poster",
+        titleNe: "नेयमार फुटबल पोस्टर",
+        category: "posters-artwork",
+        description: "A football-themed creative poster featuring Neymar.",
+        descriptionEn: "A football-themed creative poster featuring Neymar.",
+        descriptionNe: "नेयमारलाई प्रस्तुत गरिएको फुटबल विषयक सिर्जनात्मक पोस्टर।",
+        image: "assets/designs/posters-artwork/neymar-football-poster.jpg",
+        alt: "Neymar football poster",
+        software: "Canva"
+    },
 
-        descriptionNe:
-            "व्यक्तिगत भ्लग भिडियोका लागि सिर्जनात्मक थम्बनेल।",
+    {
+        id: 36,
+        title: "Cricket Sports Poster",
+        titleEn: "Cricket Sports Poster",
+        titleNe: "क्रिकेट खेल पोस्टर",
+        category: "posters-artwork",
+        description: "A cricket-themed sports poster featuring Virat Kohli.",
+        descriptionEn: "A cricket-themed sports poster featuring Virat Kohli.",
+        descriptionNe: "विराट कोहलीलाई प्रस्तुत गरिएको क्रिकेट विषयक खेल पोस्टर।",
+        image: "assets/designs/posters-artwork/virat-kohli-poster.jpg",
+        alt: "Cricket sports poster",
+        software: "Canva"
+    },
 
-        image:
-            "assets/designs/thumbnails/Vlog Thumbnail.jpg",
+    {
+        id: 37,
+        title: "New Year Celebration Poster",
+        titleEn: "New Year Celebration Poster",
+        titleNe: "नयाँ वर्ष उत्सव पोस्टर",
+        category: "posters-artwork",
+        description: "A celebratory poster concept created for a New Year occasion.",
+        descriptionEn: "A celebratory poster concept created for a New Year occasion.",
+        descriptionNe: "नयाँ वर्षको अवसरका लागि तयार गरिएको उत्सवमय पोस्टर।",
+        image: "assets/designs/posters-artwork/new-year-celebration.jpg",
+        alt: "New Year celebration poster",
+        software: "Canva"
+    },
 
-        alt: "Personal vlog YouTube thumbnail",
+    {
+        id: 38,
+        title: "Wolf Logo Concept",
+        titleEn: "Wolf Logo Concept",
+        titleNe: "ब्वाँसो लोगो अवधारणा",
+        category: "posters-artwork",
+        description: "A creative wolf logo concept exploring a distinctive visual identity.",
+        descriptionEn: "A creative wolf logo concept exploring a distinctive visual identity.",
+        descriptionNe: "विशिष्ट दृश्यात्मक पहिचान प्रस्तुत गर्ने सिर्जनात्मक ब्वाँसो लोगो अवधारणा।",
+        image: "assets/designs/posters-artwork/wolf-logo-concept.jpg",
+        alt: "Wolf logo concept",
+        software: "Canva"
+    },
 
+    {
+        id: 39,
+        title: "Creative Digital Artwork",
+        titleEn: "Creative Digital Artwork",
+        titleNe: "सिर्जनात्मक डिजिटल कलाकृति",
+        category: "posters-artwork",
+        description: "A creative digital artwork exploring visual design and composition.",
+        descriptionEn: "A creative digital artwork exploring visual design and composition.",
+        descriptionNe: "दृश्यात्मक डिजाइन तथा संयोजन प्रस्तुत गर्ने सिर्जनात्मक डिजिटल कलाकृति।",
+        image: "assets/designs/posters-artwork/creative-digital-artwork.jpg",
+        alt: "Creative digital artwork",
         software: "Canva"
     }
 

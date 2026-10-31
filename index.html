@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <!-- =========================================================
        SAJAN KHADKA — PROFESSIONAL PERSONAL PORTFOLIO
@@ -19,9 +18,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- =========================================================
-       PRIMARY SEO
-  ========================================================== -->
+  <!-- PRIMARY SEO -->
 
   <title>Sajan Khadka | Full-Stack Developer & Graphic Designer</title>
 
@@ -40,9 +37,7 @@
     href="https://sajankhadka2063-create.github.io/"
   >
 
-  <!-- =========================================================
-       OPEN GRAPH — SOCIAL MEDIA PREVIEW
-  ========================================================== -->
+  <!-- OPEN GRAPH -->
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Sajan Khadka">
@@ -67,9 +62,7 @@
     content="https://sajankhadka2063-create.github.io/assets/images/sajan.png.png"
   >
 
-  <!-- =========================================================
-       TWITTER / X PREVIEW
-  ========================================================== -->
+  <!-- TWITTER / X -->
 
   <meta name="twitter:card" content="summary_large_image">
 
@@ -88,9 +81,7 @@
     content="https://sajankhadka2063-create.github.io/assets/images/sajan.png.png"
   >
 
-  <!-- =========================================================
-       WEBSITE STRUCTURED DATA
-  ========================================================== -->
+  <!-- WEBSITE STRUCTURED DATA -->
 
   <script type="application/ld+json">
   {
@@ -105,9 +96,7 @@
   }
   </script>
 
-  <!-- =========================================================
-       PERSON STRUCTURED DATA
-  ========================================================== -->
+  <!-- PERSON STRUCTURED DATA -->
 
   <script type="application/ld+json">
   {
@@ -136,9 +125,7 @@
   }
   </script>
 
-  <!-- =========================================================
-       FAVICON
-  ========================================================== -->
+  <!-- FAVICON -->
 
   <link
     rel="icon"
@@ -146,9 +133,7 @@
     href="assets/images/sajan.png.png"
   >
 
-  <!-- =========================================================
-       GOOGLE FONTS
-  ========================================================== -->
+  <!-- GOOGLE FONTS -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -176,7 +161,7 @@
 
   <!-- =========================================================
        ADDITIONAL COMPONENT STYLES
-       Preserves compatibility with existing style.css
+       Existing style.css remains connected.
   ========================================================== -->
 
   <style>
@@ -272,6 +257,337 @@
 
     .course-complete i {
       margin-right: 5px;
+    }
+
+    /* =========================================================
+       BRAND COLORS — SOCIAL MEDIA
+    ========================================================== */
+
+    .social-links a,
+    .footer-social a {
+      transition:
+        transform 0.25s ease,
+        color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .social-links a[href*="facebook.com"],
+    .footer-social a[href*="facebook.com"] {
+      color: #1877F2;
+    }
+
+    .social-links a[href*="wa.me"],
+    .footer-social a[href*="wa.me"] {
+      color: #25D366;
+    }
+
+    .social-links a[href*="github.com"],
+    .footer-social a[href*="github.com"] {
+      color: #f8fafc;
+    }
+
+    .social-links a[href^="mailto:"],
+    .footer-social a[href^="mailto:"] {
+      color: #EA4335;
+    }
+
+    .social-links a:hover,
+    .footer-social a:hover {
+      transform: translateY(-4px) scale(1.08);
+      filter: drop-shadow(0 5px 12px rgba(56, 189, 248, 0.25));
+    }
+
+    /* CONTACT ICON BRAND COLORS */
+
+    .contact-method-icon {
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .contact-method:hover .contact-method-icon {
+      transform: scale(1.08);
+    }
+
+    .contact-method-icon.email-icon {
+      color: #EA4335;
+      background: rgba(234, 67, 53, 0.12);
+    }
+
+    .contact-method-icon.whatsapp-icon {
+      color: #25D366;
+      background: rgba(37, 211, 102, 0.12);
+    }
+
+    .contact-method-icon.facebook-icon {
+      color: #1877F2;
+      background: rgba(24, 119, 242, 0.12);
+    }
+
+    /* BUTTON ENHANCEMENTS */
+
+    .btn {
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.08);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 10px 28px rgba(14, 165, 233, 0.25);
+    }
+
+    .btn-secondary:hover {
+      box-shadow: 0 8px 22px rgba(56, 189, 248, 0.15);
+    }
+
+    .language-toggle,
+    .menu-toggle,
+    .back-to-top {
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .language-toggle:hover,
+    .menu-toggle:hover,
+    .back-to-top:hover {
+      transform: translateY(-2px);
+    }
+
+    /* SKILL ICON COLORS */
+
+    .html-icon {
+      color: #E34F26;
+      background: rgba(227, 79, 38, 0.12);
+    }
+
+    .css-icon {
+      color: #1572B6;
+      background: rgba(21, 114, 182, 0.12);
+    }
+
+    .js-icon {
+      color: #F7DF1E;
+      background: rgba(247, 223, 30, 0.12);
+    }
+
+    .design-icon {
+      color: #A78BFA;
+      background: rgba(139, 92, 246, 0.14);
+    }
+
+    .office-icon {
+      color: #2563EB;
+      background: rgba(37, 99, 235, 0.12);
+    }
+
+    .skill-card,
+    .info-card,
+    .interest-card,
+    .service-card,
+    .journey-card {
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .skill-card:hover,
+    .info-card:hover,
+    .interest-card:hover,
+    .service-card:hover,
+    .journey-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    /* SERVICE ICON COLORS */
+
+    .service-card:nth-child(6n + 1) .service-icon {
+      color: #38BDF8;
+      background: rgba(56, 189, 248, 0.12);
+    }
+
+    .service-card:nth-child(6n + 2) .service-icon {
+      color: #A78BFA;
+      background: rgba(167, 139, 250, 0.12);
+    }
+
+    .service-card:nth-child(6n + 3) .service-icon {
+      color: #F59E0B;
+      background: rgba(245, 158, 11, 0.12);
+    }
+
+    .service-card:nth-child(6n + 4) .service-icon {
+      color: #4ADE80;
+      background: rgba(74, 222, 128, 0.12);
+    }
+
+    .service-card:nth-child(6n + 5) .service-icon {
+      color: #F472B6;
+      background: rgba(244, 114, 182, 0.12);
+    }
+
+    .service-card:nth-child(6n) .service-icon {
+      color: #F97316;
+      background: rgba(249, 115, 22, 0.12);
+    }
+
+    /* =========================================================
+       PROJECT CARD ENHANCEMENTS
+    ========================================================== */
+
+    .projects-grid {
+      align-items: stretch;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(56, 189, 248, 0.5);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.25);
+    }
+
+    .project-visual {
+      position: relative;
+      min-height: 200px;
+      overflow: hidden;
+      padding-top: 42px;
+    }
+
+    .project-visual-ai {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.35), transparent 45%),
+        linear-gradient(135deg, #111827, #312e81, #0f172a);
+    }
+
+    .project-visual-study {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.35), transparent 45%),
+        linear-gradient(135deg, #082f49, #164e63, #0f172a);
+    }
+
+    .project-visual-dashboard {
+      background:
+        radial-gradient(circle at 50% 10%, rgba(34, 197, 94, 0.25), transparent 45%),
+        linear-gradient(135deg, #052e2b, #14532d, #0f172a);
+    }
+
+    .project-art {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      min-height: 145px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .project-art i {
+      font-size: 48px;
+      filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3));
+    }
+
+    .project-art span {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .project-number {
+      position: absolute;
+      right: 15px;
+      bottom: 12px;
+      z-index: 2;
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+    /* DEVELOPMENT BADGE */
+
+    .project-development-badge {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      z-index: 5;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      border-radius: 50px;
+      background: rgba(15, 23, 42, 0.94);
+      color: #FBBF24;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      line-height: 1;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(8px);
+    }
+
+    .project-development-badge::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: #F59E0B;
+      box-shadow: 0 0 9px rgba(245, 158, 11, 0.8);
+    }
+
+    .project-status {
+      color: #FBBF24;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .project-status .status-dot {
+      background: #F59E0B;
+    }
+
+    .project-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .project-tags span {
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .project-tags span:hover {
+      transform: translateY(-2px);
     }
 
     /* GRAPHIC DESIGN FILTERS */
@@ -573,6 +889,13 @@
         opacity: 0.7 !important;
       }
 
+      .project-development-badge {
+        top: 10px;
+        left: 10px;
+        padding: 7px 10px;
+        font-size: 9px;
+      }
+
     }
 
     @media (max-width: 480px) {
@@ -597,6 +920,14 @@
         font-size: 11px;
       }
 
+      .project-art i {
+        font-size: 40px;
+      }
+
+      .project-art span {
+        font-size: 14px;
+      }
+
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -607,18 +938,32 @@
 
       .design-card,
       .design-image-link img,
-      .design-filter {
+      .design-filter,
+      .project-card,
+      .btn,
+      .skill-card,
+      .info-card,
+      .interest-card,
+      .service-card,
+      .journey-card {
         transition: none;
       }
 
       .design-card:hover,
-      .design-filter:hover {
+      .design-filter:hover,
+      .project-card:hover,
+      .btn:hover,
+      .skill-card:hover,
+      .info-card:hover,
+      .interest-card:hover,
+      .service-card:hover,
+      .journey-card:hover {
         transform: none;
       }
 
     }
 
-    /* Gallery and reviews visibility fix */
+    /* GALLERY AND REVIEWS VISIBILITY FIX */
 
     #designs {
       display: block;
@@ -657,10 +1002,7 @@
 
   </style>
 
-  <!-- =========================================================
-       JAVASCRIPT FILES
-       Original loading order preserved
-  ========================================================== -->
+  <!-- JAVASCRIPT FILES: ORIGINAL LOADING ORDER PRESERVED -->
 
   <script src="supabase-config.js" defer></script>
   <script src="translations.js" defer></script>
@@ -669,12 +1011,9 @@
   <script src="particles.js" defer></script>
   <script src="transition.js" defer></script>
   <script src="supabase-reviews.js" defer></script>
-
-  <!-- Gallery and reviews compatibility fix -->
   <script src="gallery-fix.js" defer></script>
 
 </head>
-
 
 <body>
 
@@ -684,9 +1023,7 @@
     Skip to main content
   </a>
 
-  <!-- =========================================================
-       BACKGROUND EFFECTS
-  ========================================================== -->
+  <!-- BACKGROUND EFFECTS -->
 
   <div id="scrollProgress" aria-hidden="true"></div>
 
@@ -705,9 +1042,7 @@
     aria-hidden="true"
   ></div>
 
-  <!-- =========================================================
-       HEADER AND NAVIGATION
-  ========================================================== -->
+  <!-- HEADER AND NAVIGATION -->
 
   <header class="header" id="header">
 
@@ -816,9 +1151,7 @@
 
   </header>
 
-  <!-- =========================================================
-       MAIN CONTENT
-  ========================================================== -->
+  <!-- MAIN CONTENT -->
 
   <main id="mainContent">
 
@@ -850,13 +1183,8 @@
           </p>
 
           <h1 class="hero-title">
-
             Sajan
-
-            <span class="gradient-text">
-              Khadka
-            </span>
-
+            <span class="gradient-text">Khadka</span>
           </h1>
 
           <h2 class="hero-role">
@@ -896,36 +1224,24 @@
 
           <div class="hero-buttons">
 
-            <a
-              href="#projects"
-              class="btn btn-primary"
-            >
+            <a href="#projects" class="btn btn-primary">
               <span data-i18n="viewProjects">
                 Explore Projects
               </span>
-
               <i class="fa-solid fa-arrow-right"></i>
             </a>
 
-            <a
-              href="#designs"
-              class="btn btn-secondary"
-            >
+            <a href="#designs" class="btn btn-secondary">
               <span data-i18n="viewDesigns">
                 Explore Designs
               </span>
-
               <i class="fa-solid fa-palette"></i>
             </a>
 
-            <a
-              href="#contact"
-              class="btn btn-secondary"
-            >
+            <a href="#contact" class="btn btn-secondary">
               <span data-i18n="contactMe">
                 Contact Me
               </span>
-
               <i class="fa-regular fa-paper-plane"></i>
             </a>
 
@@ -1004,42 +1320,26 @@
               hidden
             >
               <i class="fa-solid fa-user"></i>
-
-              <span>
-                Sajan Khadka
-              </span>
+              <span>Sajan Khadka</span>
             </div>
 
           </div>
 
           <div class="floating-card floating-card-top">
-
             <i class="fa-solid fa-code"></i>
-
-            <span>
-              Web Development
-            </span>
-
+            <span>Web Development</span>
           </div>
 
           <div class="floating-card floating-card-bottom">
-
             <i class="fa-solid fa-palette"></i>
-
-            <span>
-              Canva Design
-            </span>
-
+            <span>Canva Design</span>
           </div>
 
           <div class="floating-label">
-
             <span class="status-dot"></span>
-
             <span data-i18n="floatingText">
               Creative Developer
             </span>
-
           </div>
 
         </div>
@@ -1047,13 +1347,10 @@
       </div>
 
       <a href="#about" class="scroll-indicator">
-
         <span data-i18n="scrollDown">
           Scroll to explore
         </span>
-
         <i class="fa-solid fa-chevron-down"></i>
-
       </a>
 
     </section>
@@ -1068,24 +1365,15 @@
 
         <div class="section-heading reveal">
 
-          <span
-            class="section-label"
-            data-i18n="aboutLabel"
-          >
+          <span class="section-label" data-i18n="aboutLabel">
             01 / INTRODUCTION
           </span>
 
-          <h2
-            class="section-title"
-            data-i18n="aboutHeading"
-          >
+          <h2 class="section-title" data-i18n="aboutHeading">
             About <span>Me</span>
           </h2>
 
-          <p
-            class="section-subtitle"
-            data-i18n="aboutSubtitle"
-          >
+          <p class="section-subtitle" data-i18n="aboutSubtitle">
             A learner, creator and future developer.
           </p>
 
@@ -1125,16 +1413,11 @@
                 <i class="fa-solid fa-laptop-code"></i>
 
                 <div>
-
-                  <h4>
-                    Web Development
-                  </h4>
-
+                  <h4>Web Development</h4>
                   <p>
                     Building practical projects and improving
                     my development skills.
                   </p>
-
                 </div>
 
               </div>
@@ -1144,16 +1427,11 @@
                 <i class="fa-solid fa-wand-magic-sparkles"></i>
 
                 <div>
-
-                  <h4>
-                    Creative Design
-                  </h4>
-
+                  <h4>Creative Design</h4>
                   <p>
                     Creating visual content and graphics
                     using Canva.
                   </p>
-
                 </div>
 
               </div>
@@ -1165,67 +1443,37 @@
           <div class="about-info-grid reveal">
 
             <article class="info-card">
-
               <div class="info-card-icon">
                 <i class="fa-solid fa-user"></i>
               </div>
-
-              <span data-i18n="infoName">
-                Name
-              </span>
-
-              <h4>
-                Sajan Khadka
-              </h4>
-
+              <span data-i18n="infoName">Name</span>
+              <h4>Sajan Khadka</h4>
             </article>
 
             <article class="info-card">
-
               <div class="info-card-icon">
                 <i class="fa-solid fa-location-dot"></i>
               </div>
-
-              <span data-i18n="infoLocation">
-                Location
-              </span>
-
-              <h4>
-                Nepal
-              </h4>
-
+              <span data-i18n="infoLocation">Location</span>
+              <h4>Nepal</h4>
             </article>
 
             <article class="info-card">
-
               <div class="info-card-icon">
                 <i class="fa-solid fa-book-open"></i>
               </div>
-
-              <span data-i18n="infoFocus">
-                Current Focus
-              </span>
-
-              <h4>
-                Web Development &amp; Graphic Design
-              </h4>
-
+              <span data-i18n="infoFocus">Current Focus</span>
+              <h4>Web Development &amp; Graphic Design</h4>
             </article>
 
             <article class="info-card">
-
               <div class="info-card-icon">
                 <i class="fa-solid fa-bullseye"></i>
               </div>
-
-              <span data-i18n="infoGoal">
-                Career Goal
-              </span>
-
+              <span data-i18n="infoGoal">Career Goal</span>
               <h4 data-i18n="infoGoalValue">
                 Full-Stack Developer
               </h4>
-
             </article>
 
           </div>
@@ -1235,54 +1483,40 @@
         <div class="interests-grid">
 
           <article class="interest-card reveal">
-
             <div class="interest-icon">
               <i class="fa-solid fa-brain"></i>
             </div>
-
-            <h3 data-i18n="interestAI">
-              AI &amp; Technology
-            </h3>
-
+            <h3 data-i18n="interestAI">AI &amp; Technology</h3>
             <p data-i18n="interestAIDesc">
               Exploring intelligent applications
               and modern technologies.
             </p>
-
           </article>
 
           <article class="interest-card reveal">
-
             <div class="interest-icon">
               <i class="fa-solid fa-graduation-cap"></i>
             </div>
-
             <h3 data-i18n="interestEdtech">
               Educational Technology
             </h3>
-
             <p data-i18n="interestEdtechDesc">
               Interested in tools that make
               learning more accessible.
             </p>
-
           </article>
 
           <article class="interest-card reveal">
-
             <div class="interest-icon">
               <i class="fa-solid fa-chart-line"></i>
             </div>
-
             <h3 data-i18n="interestProductivity">
               Productivity
             </h3>
-
             <p data-i18n="interestProductivityDesc">
               Creating ideas for better organization
               and personal growth.
             </p>
-
           </article>
 
         </div>
@@ -1301,24 +1535,15 @@
 
         <div class="section-heading reveal">
 
-          <span
-            class="section-label"
-            data-i18n="skillsLabel"
-          >
+          <span class="section-label" data-i18n="skillsLabel">
             02 / SKILLS &amp; TRAINING
           </span>
 
-          <h2
-            class="section-title"
-            data-i18n="skillsHeading"
-          >
+          <h2 class="section-title" data-i18n="skillsHeading">
             Technical <span>Skills</span>
           </h2>
 
-          <p
-            class="section-subtitle"
-            data-i18n="skillsSubtitle"
-          >
+          <p class="section-subtitle" data-i18n="skillsSubtitle">
             My technical skills, completed training
             and learning roadmap.
           </p>
@@ -1332,115 +1557,77 @@
           <div class="skills-panel reveal">
 
             <div class="panel-heading">
-
               <i class="fa-solid fa-circle-check"></i>
-
               <h3 data-i18n="completedCourses">
                 Completed Courses &amp; Training
               </h3>
-
             </div>
 
             <div class="skills-grid">
 
               <article class="skill-card">
-
                 <div class="skill-icon html-icon">
                   <i class="fa-brands fa-html5"></i>
                 </div>
-
                 <h4>HTML5</h4>
-
                 <span class="skill-status course-complete">
-
                   <i class="fa-solid fa-check"></i>
-
                   <span data-i18n="courseCompleted">
                     Course Completed
                   </span>
-
                 </span>
-
               </article>
 
               <article class="skill-card">
-
                 <div class="skill-icon css-icon">
                   <i class="fa-brands fa-css3-alt"></i>
                 </div>
-
                 <h4>CSS3</h4>
-
                 <span class="skill-status course-complete">
-
                   <i class="fa-solid fa-check"></i>
-
                   <span data-i18n="courseCompleted">
                     Course Completed
                   </span>
-
                 </span>
-
               </article>
 
               <article class="skill-card">
-
                 <div class="skill-icon js-icon">
                   <i class="fa-brands fa-js"></i>
                 </div>
-
                 <h4>JavaScript</h4>
-
                 <span class="skill-status course-complete">
-
                   <i class="fa-solid fa-check"></i>
-
                   <span data-i18n="courseCompleted">
                     Course Completed
                   </span>
-
                 </span>
-
               </article>
 
               <article class="skill-card">
-
                 <div class="skill-icon design-icon">
                   <i class="fa-solid fa-palette"></i>
                 </div>
-
                 <h4>Canva</h4>
-
                 <span class="skill-status course-complete">
-
                   <i class="fa-solid fa-check"></i>
-
                   <span data-i18n="courseCompleted">
                     Course Completed
                   </span>
-
                 </span>
-
               </article>
 
               <article class="skill-card">
-
                 <div class="skill-icon office-icon">
                   <i class="fa-solid fa-file-word"></i>
                 </div>
-
                 <h4>MS Office</h4>
-
                 <span class="skill-status course-complete">
-
                   <i class="fa-solid fa-check"></i>
-
                   <span data-i18n="courseCompleted">
                     Course Completed
                   </span>
-
                 </span>
-
               </article>
 
             </div>
@@ -1452,127 +1639,68 @@
           <div class="skills-panel roadmap-panel reveal">
 
             <div class="panel-heading">
-
               <i class="fa-solid fa-route"></i>
-
               <h3 data-i18n="futureSkills">
                 Learning Roadmap
               </h3>
-
             </div>
 
             <div class="roadmap-list">
 
               <div class="roadmap-item">
-
-                <span class="roadmap-number">
-                  01
-                </span>
-
+                <span class="roadmap-number">01</span>
                 <div>
-
-                  <h4>
-                    Git &amp; GitHub
-                  </h4>
-
+                  <h4>Git &amp; GitHub</h4>
                   <p>
                     Version control, repositories
                     and deployment.
                   </p>
-
                 </div>
-
-                <span
-                  class="roadmap-status"
-                  data-i18n="inProgressStatus"
-                >
+                <span class="roadmap-status" data-i18n="inProgressStatus">
                   In Progress
                 </span>
-
               </div>
 
               <div class="roadmap-item">
-
-                <span class="roadmap-number">
-                  02
-                </span>
-
+                <span class="roadmap-number">02</span>
                 <div>
-
-                  <h4>
-                    Advanced JavaScript
-                  </h4>
-
+                  <h4>Advanced JavaScript</h4>
                   <p>
                     APIs, asynchronous code and
                     interactive applications.
                   </p>
-
                 </div>
-
-                <span
-                  class="roadmap-status"
-                  data-i18n="inProgressStatus"
-                >
+                <span class="roadmap-status" data-i18n="inProgressStatus">
                   In Progress
                 </span>
-
               </div>
 
               <div class="roadmap-item">
-
-                <span class="roadmap-number">
-                  03
-                </span>
-
+                <span class="roadmap-number">03</span>
                 <div>
-
-                  <h4>
-                    React.js
-                  </h4>
-
+                  <h4>React.js</h4>
                   <p>
                     Components and modern
                     frontend development.
                   </p>
-
                 </div>
-
-                <span
-                  class="roadmap-status"
-                  data-i18n="plannedStatus"
-                >
+                <span class="roadmap-status" data-i18n="plannedStatus">
                   Planned
                 </span>
-
               </div>
 
               <div class="roadmap-item">
-
-                <span class="roadmap-number">
-                  04
-                </span>
-
+                <span class="roadmap-number">04</span>
                 <div>
-
-                  <h4>
-                    Backend Development
-                  </h4>
-
+                  <h4>Backend Development</h4>
                   <p>
                     Node.js, Express, APIs
                     and databases.
                   </p>
-
                 </div>
-
-                <span
-                  class="roadmap-status"
-                  data-i18n="plannedStatus"
-                >
+                <span class="roadmap-status" data-i18n="plannedStatus">
                   Planned
                 </span>
-
               </div>
 
             </div>
@@ -1595,24 +1723,15 @@
 
         <div class="section-heading reveal">
 
-          <span
-            class="section-label"
-            data-i18n="projectsLabel"
-          >
+          <span class="section-label" data-i18n="projectsLabel">
             03 / MY PROJECTS
           </span>
 
-          <h2
-            class="section-title"
-            data-i18n="projectsHeading"
-          >
+          <h2 class="section-title" data-i18n="projectsHeading">
             Featured <span>Projects</span>
           </h2>
 
-          <p
-            class="section-subtitle"
-            data-i18n="projectsSubtitle"
-          >
+          <p class="section-subtitle" data-i18n="projectsSubtitle">
             Concepts and ongoing work from my
             development journey.
           </p>
@@ -1625,39 +1744,31 @@
 
           <article class="project-card reveal">
 
+            <span class="project-development-badge">
+              UNDER DEVELOPMENT
+            </span>
+
             <div class="project-visual project-visual-ai">
 
               <div class="project-art">
-
                 <i class="fa-solid fa-brain"></i>
-
-                <span>
-                  OMSA NEXUS
-                </span>
-
+                <span>OMSA NEXUS</span>
               </div>
 
-              <span class="project-number">
-                01
-              </span>
+              <span class="project-number">01</span>
 
             </div>
 
             <div class="project-content">
 
               <div class="project-status">
-
                 <span class="status-dot"></span>
-
                 <span data-i18n="projectStatus">
-                  Concept / In Development
+                  Under Development
                 </span>
-
               </div>
 
-              <h3>
-                OMSA Nexus
-              </h3>
+              <h3>OMSA Nexus</h3>
 
               <p data-i18n="omsaDescription">
                 A personal AI assistant concept exploring
@@ -1666,11 +1777,9 @@
               </p>
 
               <div class="project-tags">
-
                 <span>AI</span>
                 <span>Productivity</span>
                 <span>Voice</span>
-
               </div>
 
             </div>
@@ -1681,39 +1790,31 @@
 
           <article class="project-card reveal">
 
+            <span class="project-development-badge">
+              UNDER DEVELOPMENT
+            </span>
+
             <div class="project-visual project-visual-study">
 
               <div class="project-art">
-
                 <i class="fa-solid fa-graduation-cap"></i>
-
-                <span>
-                  EXAMSATHI
-                </span>
-
+                <span>EXAMSATHI</span>
               </div>
 
-              <span class="project-number">
-                02
-              </span>
+              <span class="project-number">02</span>
 
             </div>
 
             <div class="project-content">
 
               <div class="project-status">
-
                 <span class="status-dot"></span>
-
                 <span data-i18n="projectStatus">
-                  Concept / In Development
+                  Under Development
                 </span>
-
               </div>
 
-              <h3>
-                ExamSathi
-              </h3>
+              <h3>ExamSathi</h3>
 
               <p data-i18n="examDescription">
                 An educational platform concept for Lok Sewa
@@ -1722,11 +1823,9 @@
               </p>
 
               <div class="project-tags">
-
                 <span>Education</span>
                 <span>JavaScript</span>
                 <span>Learning</span>
-
               </div>
 
             </div>
@@ -1737,39 +1836,31 @@
 
           <article class="project-card reveal">
 
+            <span class="project-development-badge">
+              UNDER DEVELOPMENT
+            </span>
+
             <div class="project-visual project-visual-dashboard">
 
               <div class="project-art">
-
                 <i class="fa-solid fa-chart-pie"></i>
-
-                <span>
-                  MY DASHBOARD
-                </span>
-
+                <span>MY DASHBOARD</span>
               </div>
 
-              <span class="project-number">
-                03
-              </span>
+              <span class="project-number">03</span>
 
             </div>
 
             <div class="project-content">
 
               <div class="project-status">
-
                 <span class="status-dot"></span>
-
                 <span data-i18n="projectStatus">
-                  Concept / In Development
+                  Under Development
                 </span>
-
               </div>
 
-              <h3>
-                Productivity Dashboard
-              </h3>
+              <h3>Productivity Dashboard</h3>
 
               <p data-i18n="dashboardDescription">
                 A personal organization application concept
@@ -1778,11 +1869,9 @@
               </p>
 
               <div class="project-tags">
-
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
-
               </div>
 
             </div>
@@ -1792,12 +1881,9 @@
         </div>
 
         <p class="section-footnote">
-
           <i class="fa-solid fa-circle-info"></i>
-
           Some projects are concepts or works in progress.
           Features and availability may change.
-
         </p>
 
       </div>
@@ -1815,24 +1901,15 @@
 
         <div class="section-heading reveal">
 
-          <span
-            class="section-label"
-            data-i18n="designsLabel"
-          >
+          <span class="section-label" data-i18n="designsLabel">
             04 / CREATIVE WORK
           </span>
 
-          <h2
-            class="section-title"
-            data-i18n="designsHeading"
-          >
+          <h2 class="section-title" data-i18n="designsHeading">
             Graphic <span>Designs</span>
           </h2>
 
-          <p
-            class="section-subtitle"
-            data-i18n="designsSubtitle"
-          >
+          <p class="section-subtitle" data-i18n="designsSubtitle">
             Explore my creative designs, including
             social media posts, advertisements, logos,
             thumbnails, invitations and branding concepts.
@@ -1858,58 +1935,15 @@
           id="designsGrid"
           aria-live="polite"
         >
-          <!--
-            Gallery cards are generated from:
-            assets/data/designs.js
-          -->
+          <!-- Gallery cards generated from assets/data/designs.js -->
         </div>
 
         <noscript>
-
           <p class="section-footnote">
             JavaScript is required to display
             the interactive graphic design gallery.
           </p>
-
         </noscript>
-
-        <!-- RESTAURANT MENU CTA -->
-
-        <div class="design-menu-cta reveal">
-
-          <div class="design-menu-icon">
-
-            <i class="fa-solid fa-utensils"></i>
-
-          </div>
-
-          <div class="design-menu-content">
-
-            <h3 data-i18n="designMenuTitle">
-              Restaurant Menu Design
-            </h3>
-
-            <p data-i18n="designMenuDesc">
-              Explore a sample restaurant menu design
-              from my graphic design portfolio.
-            </p>
-
-          </div>
-
-          <a
-            href="assets/designs/branding/restaurant-menu.png"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-secondary"
-          >
-            <span data-i18n="designMenuButton">
-              View Menu
-            </span>
-
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-
-        </div>
 
         <!-- DESIGN CONTACT CTA -->
 
@@ -1927,7 +1961,6 @@
             rel="noopener noreferrer"
           >
             <i class="fa-brands fa-whatsapp"></i>
-
             <span data-i18n="designContactButton">
               Let's Work Together
             </span>
@@ -1949,24 +1982,15 @@
 
         <div class="section-heading reveal">
 
-          <span
-            class="section-label"
-            data-i18n="educationLabel"
-          >
+          <span class="section-label" data-i18n="educationLabel">
             05 / ACADEMICS
           </span>
 
-          <h2
-            class="section-title"
-            data-i18n="educationHeading"
-          >
+          <h2 class="section-title" data-i18n="educationHeading">
             My <span>Education</span>
           </h2>
 
-          <p
-            class="section-subtitle"
-            data-i18n="educationSubtitle"
-          >
+          <p class="section-subtitle" data-i18n="educationSubtitle">
             My academic background and learning journey.
           </p>
 
@@ -1979,9 +2003,7 @@
           <article class="education-card reveal">
 
             <div class="timeline-marker">
-
               <i class="fa-solid fa-graduation-cap"></i>
-
             </div>
 
             <div class="education-card-content">
@@ -1994,28 +2016,16 @@
                 Higher Secondary Education (+2)
               </h3>
 
-              <h4>
-                Brooklyn Academy College
-              </h4>
+              <h4>Brooklyn Academy College</h4>
 
               <p class="education-location">
-
                 <i class="fa-solid fa-location-dot"></i>
-
                 Sukedhara, Kathmandu, Nepal
-
               </p>
 
               <div class="education-result">
-
-                <span class="result-label">
-                  GPA
-                </span>
-
-                <strong>
-                  3.87
-                </strong>
-
+                <span class="result-label">GPA</span>
+                <strong>3.87</strong>
               </div>
 
             </div>
@@ -2027,44 +2037,28 @@
           <article class="education-card reveal">
 
             <div class="timeline-marker">
-
               <i class="fa-solid fa-school"></i>
-
             </div>
 
             <div class="education-card-content">
 
-              <span class="education-type">
-                Secondary
-              </span>
+              <span class="education-type">Secondary</span>
 
               <h3 data-i18n="secondary">
                 Secondary Education (SEE)
               </h3>
 
-              <h4>
-                Shree Naulin Secondary School
-              </h4>
+              <h4>Shree Naulin Secondary School</h4>
 
               <p class="education-location">
-
                 <i class="fa-solid fa-location-dot"></i>
-
                 Budhanilkantha-13, Chunikhel,
                 Kathmandu, Nepal
-
               </p>
 
               <div class="education-result">
-
-                <span class="result-label">
-                  GPA
-                </span>
-
-                <strong>
-                  3.45
-                </strong>
-
+                <span class="result-label">GPA</span>
+                <strong>3.45</strong>
               </div>
 
             </div>
@@ -2076,9 +2070,7 @@
           <article class="education-card reveal">
 
             <div class="timeline-marker">
-
               <i class="fa-solid fa-laptop"></i>
-
             </div>
 
             <div class="education-card-content">
@@ -2087,13 +2079,9 @@
                 Professional Training
               </span>
 
-              <h3>
-                MS Office Package Training
-              </h3>
+              <h3>MS Office Package Training</h3>
 
-              <h4>
-                Microsoft Office Applications
-              </h4>
+              <h4>Microsoft Office Applications</h4>
 
               <p>
                 Completed a three-month
@@ -2101,15 +2089,8 @@
               </p>
 
               <div class="education-result">
-
-                <span class="result-label">
-                  Grade
-                </span>
-
-                <strong>
-                  A
-                </strong>
-
+                <span class="result-label">Grade</span>
+                <strong>A</strong>
               </div>
 
             </div>
@@ -2133,17 +2114,12 @@
         <div class="cv-card reveal">
 
           <div class="cv-icon">
-
             <i class="fa-solid fa-file-pdf"></i>
-
           </div>
 
           <div class="cv-content">
 
-            <span
-              class="section-label"
-              data-i18n="cvLabel"
-            >
+            <span class="section-label" data-i18n="cvLabel">
               MY RESUME
             </span>
 
@@ -2167,10 +2143,7 @@
               class="btn btn-secondary"
             >
               <i class="fa-solid fa-eye"></i>
-
-              <span data-i18n="viewCV">
-                View CV
-              </span>
+              <span data-i18n="viewCV">View CV</span>
             </a>
 
             <a
@@ -2179,10 +2152,7 @@
               class="btn btn-primary"
             >
               <i class="fa-solid fa-download"></i>
-
-              <span data-i18n="downloadCV">
-                Download CV
-              </span>
+              <span data-i18n="downloadCV">Download CV</span>
             </a>
 
           </div>
@@ -2203,24 +2173,15 @@
 
         <div class="section-heading reveal">
 
-          <span
-            class="section-label"
-            data-i18n="servicesLabel"
-          >
+          <span class="section-label" data-i18n="servicesLabel">
             06 / SERVICES
           </span>
 
-          <h2
-            class="section-title"
-            data-i18n="servicesHeading"
-          >
+          <h2 class="section-title" data-i18n="servicesHeading">
             What I <span>Can Create</span>
           </h2>
 
-          <p
-            class="section-subtitle"
-            data-i18n="servicesSubtitle"
-          >
+          <p class="section-subtitle" data-i18n="servicesSubtitle">
             Creative design services and web
             development skills I am developing.
           </p>
@@ -2232,264 +2193,187 @@
           <!-- SERVICE 01 -->
 
           <article class="service-card reveal">
-
             <div class="service-icon">
               <i class="fa-solid fa-globe"></i>
             </div>
-
-            <h3 data-i18n="service1">
-              Portfolio Websites
-            </h3>
-
+            <h3 data-i18n="service1">Portfolio Websites</h3>
             <p data-i18n="service1Desc">
               Personal websites that present
               professional skills and projects.
             </p>
-
             <span class="service-number">01</span>
-
           </article>
 
           <!-- SERVICE 02 -->
 
           <article class="service-card reveal">
-
             <div class="service-icon">
               <i class="fa-solid fa-mobile-screen-button"></i>
             </div>
-
-            <h3 data-i18n="service2">
-              Responsive Web Design
-            </h3>
-
+            <h3 data-i18n="service2">Responsive Web Design</h3>
             <p data-i18n="service2Desc">
               Layouts designed for desktop,
               tablet and mobile devices.
             </p>
-
             <span class="service-number">02</span>
-
           </article>
 
           <!-- SERVICE 03 -->
 
           <article class="service-card reveal">
-
             <div class="service-icon">
               <i class="fa-solid fa-rectangle-ad"></i>
             </div>
-
-            <h3 data-i18n="service3">
-              Landing Pages
-            </h3>
-
+            <h3 data-i18n="service3">Landing Pages</h3>
             <p data-i18n="service3Desc">
               Focused web pages for products,
               services and personal brands.
             </p>
-
             <span class="service-number">03</span>
-
           </article>
 
           <!-- SERVICE 04 -->
 
           <article class="service-card reveal">
-
             <div class="service-icon">
               <i class="fa-solid fa-code"></i>
             </div>
-
-            <h3 data-i18n="service4">
-              Frontend Development
-            </h3>
-
+            <h3 data-i18n="service4">Frontend Development</h3>
             <p data-i18n="service4Desc">
               Interactive website interfaces
               using modern web technologies.
             </p>
-
             <span class="service-number">04</span>
-
           </article>
 
           <!-- SERVICE 05 -->
 
           <article class="service-card reveal">
-
             <div class="service-icon">
               <i class="fa-solid fa-sliders"></i>
             </div>
-
-            <h3 data-i18n="service5">
-              Website Customization
-            </h3>
-
+            <h3 data-i18n="service5">Website Customization</h3>
             <p data-i18n="service5Desc">
               Improving layouts, styling and
               basic website functionality.
             </p>
-
             <span class="service-number">05</span>
-
           </article>
 
           <!-- SERVICE 06 -->
 
           <article class="service-card reveal">
-
             <div class="service-icon">
               <i class="fa-solid fa-book-open-reader"></i>
             </div>
-
-            <h3 data-i18n="service6">
-              Educational Web Apps
-            </h3>
-
+            <h3 data-i18n="service6">Educational Web Apps</h3>
             <p data-i18n="service6Desc">
               Exploring practical applications
               for learning and productivity.
             </p>
-
             <span class="service-number">06</span>
-
           </article>
 
           <!-- SERVICE 07 -->
 
           <article class="service-card reveal">
-
             <div class="service-icon">
               <i class="fa-brands fa-instagram"></i>
             </div>
-
             <h3 data-i18n="service7">
               Social Media Graphic Design
             </h3>
-
             <p data-i18n="service7Desc">
               Creative promotional posts and
               advertisements for social media.
             </p>
-
             <span class="service-number">07</span>
-
           </article>
 
           <!-- SERVICE 08 -->
 
           <article class="service-card reveal">
-
             <div class="service-icon">
               <i class="fa-brands fa-youtube"></i>
             </div>
-
             <h3 data-i18n="service8">
               YouTube Thumbnail Design
             </h3>
-
             <p data-i18n="service8Desc">
               Eye-catching thumbnails
               for YouTube videos.
             </p>
-
             <span class="service-number">08</span>
-
           </article>
 
           <!-- SERVICE 09 -->
 
           <article class="service-card reveal">
-
             <div class="service-icon">
               <i class="fa-solid fa-image"></i>
             </div>
-
-            <h3 data-i18n="service9">
-              Posters &amp; Flyers
-            </h3>
-
+            <h3 data-i18n="service9">Posters &amp; Flyers</h3>
             <p data-i18n="service9Desc">
               Promotional posters, business
               offers and event flyers.
             </p>
-
             <span class="service-number">09</span>
-
           </article>
 
           <!-- SERVICE 10 -->
 
           <article class="service-card reveal">
-
             <div class="service-icon">
               <i class="fa-solid fa-pen-nib"></i>
             </div>
-
             <h3 data-i18n="service10">
               Logo &amp; Branding Concepts
             </h3>
-
             <p data-i18n="service10Desc">
               Creative logo ideas and
               visual branding concepts.
             </p>
-
             <span class="service-number">10</span>
-
           </article>
 
           <!-- SERVICE 11 -->
 
           <article class="service-card reveal">
-
             <div class="service-icon">
               <i class="fa-solid fa-envelope-open-text"></i>
             </div>
-
             <h3 data-i18n="service11">
               Festival &amp; Invitation Designs
             </h3>
-
             <p data-i18n="service11Desc">
               Festival greetings, invitations
               and celebration graphics.
             </p>
-
             <span class="service-number">11</span>
-
           </article>
 
           <!-- SERVICE 12 -->
 
           <article class="service-card reveal">
-
             <div class="service-icon">
               <i class="fa-solid fa-utensils"></i>
             </div>
-
             <h3 data-i18n="service12">
               Restaurant Menu Design
             </h3>
-
             <p data-i18n="service12Desc">
               Restaurant menus and food
               promotion designs.
             </p>
-
             <span class="service-number">12</span>
-
           </article>
 
         </div>
 
         <p class="section-footnote">
-
           <i class="fa-solid fa-circle-info"></i>
-
           Services depend on project requirements
           and current availability.
-
         </p>
 
       </div>
@@ -2506,24 +2390,15 @@
 
         <div class="section-heading reveal">
 
-          <span
-            class="section-label"
-            data-i18n="journeyLabel"
-          >
+          <span class="section-label" data-i18n="journeyLabel">
             07 / GROWTH
           </span>
 
-          <h2
-            class="section-title"
-            data-i18n="journeyHeading"
-          >
+          <h2 class="section-title" data-i18n="journeyHeading">
             My Learning <span>Journey</span>
           </h2>
 
-          <p
-            class="section-subtitle"
-            data-i18n="journeySubtitle"
-          >
+          <p class="section-subtitle" data-i18n="journeySubtitle">
             A roadmap toward becoming a professional
             full-stack developer.
           </p>
@@ -2533,79 +2408,55 @@
         <div class="journey-grid">
 
           <article class="journey-card reveal">
-
             <span class="journey-step">01</span>
-
             <div class="journey-icon">
               <i class="fa-solid fa-code"></i>
             </div>
-
-            <h3 data-i18n="journey1">
-              Web Fundamentals
-            </h3>
-
+            <h3 data-i18n="journey1">Web Fundamentals</h3>
             <p>
               HTML, CSS, JavaScript
               and responsive design.
             </p>
-
           </article>
 
           <article class="journey-card reveal">
-
             <span class="journey-step">02</span>
-
             <div class="journey-icon">
               <i class="fa-solid fa-screwdriver-wrench"></i>
             </div>
-
-            <h3 data-i18n="journey2">
-              Developer Tools
-            </h3>
-
+            <h3 data-i18n="journey2">Developer Tools</h3>
             <p>
               VS Code, Git, GitHub
               and practical workflows.
             </p>
-
           </article>
 
           <article class="journey-card reveal">
-
             <span class="journey-step">03</span>
-
             <div class="journey-icon">
               <i class="fa-solid fa-layer-group"></i>
             </div>
-
             <h3 data-i18n="journey3">
               Frontend Frameworks
             </h3>
-
             <p>
               Component-based frontend
               development.
             </p>
-
           </article>
 
           <article class="journey-card reveal">
-
             <span class="journey-step">04</span>
-
             <div class="journey-icon">
               <i class="fa-solid fa-server"></i>
             </div>
-
             <h3 data-i18n="journey4">
               Backend Development
             </h3>
-
             <p>
               APIs, servers, databases
               and full-stack applications.
             </p>
-
           </article>
 
         </div>
@@ -2618,117 +2469,208 @@
          10 — CLIENT REVIEWS
     ======================================================== -->
 
-   
-<!-- ==========================================
-     SAJAN KHADKA — CLIENT REVIEWS SECTION
-========================================== -->
+    <section class="section reviews-section" id="reviews">
 
-<section class="section reviews-section" id="reviews">
-  <div class="container">
+      <div class="container">
 
-    <div class="section-heading reveal">
-      <span class="section-label" data-i18n="reviewsLabel">08 / FEEDBACK</span>
-      <h2 class="section-title" data-i18n="reviewsHeading">Client Reviews</h2>
-      <p class="section-subtitle" data-i18n="reviewsSubtitle">
-        Feedback and testimonials related to my creative work.
-      </p>
-    </div>
+        <div class="section-heading reveal">
 
-    <div class="reviews-grid" id="reviewsGrid" aria-live="polite"></div>
+          <span class="section-label" data-i18n="reviewsLabel">
+            08 / FEEDBACK
+          </span>
 
-    <div class="reviews-empty-card reveal" id="reviewsEmptyState">
-      <div class="reviews-illustration">
-        <i class="fa-regular fa-comments"></i>
-      </div>
-      <h3 data-i18n="reviewsEmptyTitle">Client Reviews Coming Soon</h3>
-      <p data-i18n="reviewsEmptyDesc">
-        Genuine client feedback will be shared here as projects are completed.
-      </p>
-    </div>
+          <h2 class="section-title" data-i18n="reviewsHeading">
+            Client Reviews
+          </h2>
 
-    <div class="review-form-wrapper reveal">
+          <p class="section-subtitle" data-i18n="reviewsSubtitle">
+            Feedback and testimonials related to my creative work.
+          </p>
 
-      <div class="review-form-heading">
-        <h3 data-i18n="reviewFormHeading">Share Your Experience</h3>
-        <p data-i18n="reviewFormDescription">
-          Have you worked with me? Share your honest feedback below.
-          Your review will appear after approval.
-        </p>
-      </div>
-
-      <form id="clientReviewForm">
-
-        <div class="review-form-group">
-          <label for="reviewName" data-i18n="reviewNameLabel">Your Name *</label>
-          <input
-            type="text"
-            id="reviewName"
-            name="name"
-            data-i18n-placeholder="reviewNamePlaceholder"
-            placeholder="Enter your name"
-            minlength="2"
-            maxlength="100"
-            required
-          >
         </div>
 
-        <div class="review-form-group">
-          <label for="reviewService" data-i18n="reviewServiceLabel">Service Received *</label>
-          <select id="reviewService" name="service" required>
-            <option value="" data-i18n="reviewServicePlaceholder">Select a service</option>
-            <option value="Logo Design" data-i18n="reviewServiceLogo">Logo Design</option>
-            <option value="Social Media Design" data-i18n="reviewServiceSocial">Social Media Design</option>
-            <option value="Poster Design" data-i18n="reviewServicePoster">Poster Design</option>
-            <option value="Business Card Design" data-i18n="reviewServiceBusinessCard">Business Card Design</option>
-            <option value="YouTube Thumbnail" data-i18n="reviewServiceThumbnail">YouTube Thumbnail</option>
-            <option value="Web Development" data-i18n="reviewServiceWeb">Web Development</option>
-            <option value="Other Design Service" data-i18n="reviewServiceOther">Other Design Service</option>
-          </select>
-        </div>
+        <div
+          class="reviews-grid"
+          id="reviewsGrid"
+          aria-live="polite"
+        ></div>
 
-        <div class="review-form-group">
-          <label for="reviewRating" data-i18n="reviewRatingLabel">Your Rating *</label>
-          <select id="reviewRating" name="rating" required>
-            <option value="" data-i18n="reviewRatingPlaceholder">Select your rating</option>
-            <option value="5" data-i18n="reviewRatingExcellent">★★★★★ — Excellent</option>
-            <option value="4" data-i18n="reviewRatingVeryGood">★★★★☆ — Very Good</option>
-            <option value="3" data-i18n="reviewRatingGood">★★★☆☆ — Good</option>
-            <option value="2" data-i18n="reviewRatingFair">★★☆☆☆ — Fair</option>
-            <option value="1" data-i18n="reviewRatingPoor">★☆☆☆☆ — Poor</option>
-          </select>
-        </div>
-
-        <div class="review-form-group">
-          <label for="reviewMessage" data-i18n="reviewMessageLabel">Your Feedback *</label>
-          <textarea
-            id="reviewMessage"
-            name="review"
-            rows="5"
-            minlength="10"
-            maxlength="2000"
-            data-i18n-placeholder="reviewMessagePlaceholder"
-            placeholder="Tell us about your experience..."
-            required
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          class="btn btn-primary review-submit-btn"
-          id="reviewSubmitBtn"
+        <div
+          class="reviews-empty-card reveal"
+          id="reviewsEmptyState"
         >
-          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-          <span data-i18n="reviewSubmitButton">Submit Review</span>
-        </button>
 
-        <p id="reviewFormStatus" role="status" aria-live="polite"></p>
+          <div class="reviews-illustration">
+            <i class="fa-regular fa-comments"></i>
+          </div>
 
-      </form>
-    </div>
+          <h3 data-i18n="reviewsEmptyTitle">
+            Client Reviews Coming Soon
+          </h3>
 
-  </div>
-</section>
+          <p data-i18n="reviewsEmptyDesc">
+            Genuine client feedback will be shared here as projects are completed.
+          </p>
 
+        </div>
+
+        <div class="review-form-wrapper reveal">
+
+          <div class="review-form-heading">
+            <h3 data-i18n="reviewFormHeading">
+              Share Your Experience
+            </h3>
+
+            <p data-i18n="reviewFormDescription">
+              Have you worked with me? Share your honest feedback below.
+              Your review will appear after approval.
+            </p>
+          </div>
+
+          <form id="clientReviewForm">
+
+            <div class="review-form-group">
+
+              <label for="reviewName" data-i18n="reviewNameLabel">
+                Your Name *
+              </label>
+
+              <input
+                type="text"
+                id="reviewName"
+                name="name"
+                data-i18n-placeholder="reviewNamePlaceholder"
+                placeholder="Enter your name"
+                minlength="2"
+                maxlength="100"
+                required
+              >
+
+            </div>
+
+            <div class="review-form-group">
+
+              <label for="reviewService" data-i18n="reviewServiceLabel">
+                Service Received *
+              </label>
+
+              <select id="reviewService" name="service" required>
+
+                <option value="" data-i18n="reviewServicePlaceholder">
+                  Select a service
+                </option>
+
+                <option value="Logo Design" data-i18n="reviewServiceLogo">
+                  Logo Design
+                </option>
+
+                <option value="Social Media Design" data-i18n="reviewServiceSocial">
+                  Social Media Design
+                </option>
+
+                <option value="Poster Design" data-i18n="reviewServicePoster">
+                  Poster Design
+                </option>
+
+                <option value="Business Card Design" data-i18n="reviewServiceBusinessCard">
+                  Business Card Design
+                </option>
+
+                <option value="YouTube Thumbnail" data-i18n="reviewServiceThumbnail">
+                  YouTube Thumbnail
+                </option>
+
+                <option value="Web Development" data-i18n="reviewServiceWeb">
+                  Web Development
+                </option>
+
+                <option value="Other Design Service" data-i18n="reviewServiceOther">
+                  Other Design Service
+                </option>
+
+              </select>
+
+            </div>
+
+            <div class="review-form-group">
+
+              <label for="reviewRating" data-i18n="reviewRatingLabel">
+                Your Rating *
+              </label>
+
+              <select id="reviewRating" name="rating" required>
+
+                <option value="" data-i18n="reviewRatingPlaceholder">
+                  Select your rating
+                </option>
+
+                <option value="5" data-i18n="reviewRatingExcellent">
+                  ★★★★★ — Excellent
+                </option>
+
+                <option value="4" data-i18n="reviewRatingVeryGood">
+                  ★★★★☆ — Very Good
+                </option>
+
+                <option value="3" data-i18n="reviewRatingGood">
+                  ★★★☆☆ — Good
+                </option>
+
+                <option value="2" data-i18n="reviewRatingFair">
+                  ★★☆☆☆ — Fair
+                </option>
+
+                <option value="1" data-i18n="reviewRatingPoor">
+                  ★☆☆☆☆ — Poor
+                </option>
+
+              </select>
+
+            </div>
+
+            <div class="review-form-group">
+
+              <label for="reviewMessage" data-i18n="reviewMessageLabel">
+                Your Feedback *
+              </label>
+
+              <textarea
+                id="reviewMessage"
+                name="review"
+                rows="5"
+                minlength="10"
+                maxlength="2000"
+                data-i18n-placeholder="reviewMessagePlaceholder"
+                placeholder="Tell us about your experience..."
+                required
+              ></textarea>
+
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary review-submit-btn"
+              id="reviewSubmitBtn"
+            >
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              <span data-i18n="reviewSubmitButton">
+                Submit Review
+              </span>
+            </button>
+
+            <p
+              id="reviewFormStatus"
+              role="status"
+              aria-live="polite"
+            ></p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
 
     <!-- =======================================================
          11 — CONTACT SECTION
@@ -2740,24 +2682,15 @@
 
         <div class="section-heading reveal">
 
-          <span
-            class="section-label"
-            data-i18n="contactLabel"
-          >
+          <span class="section-label" data-i18n="contactLabel">
             09 / GET IN TOUCH
           </span>
 
-          <h2
-            class="section-title"
-            data-i18n="contactHeading"
-          >
+          <h2 class="section-title" data-i18n="contactHeading">
             Let's <span>Connect</span>
           </h2>
 
-          <p
-            class="section-subtitle"
-            data-i18n="contactSubtitle"
-          >
+          <p class="section-subtitle" data-i18n="contactSubtitle">
             Have a design project, website idea
             or collaboration opportunity?
             Feel free to reach out.
@@ -2788,18 +2721,13 @@
               class="contact-method"
             >
 
-              <span class="contact-method-icon">
+              <span class="contact-method-icon email-icon">
                 <i class="fa-regular fa-envelope"></i>
               </span>
 
               <span class="contact-method-text">
-
                 <small>Email</small>
-
-                <strong>
-                  sajankhadka2063@gmail.com
-                </strong>
-
+                <strong>sajankhadka2063@gmail.com</strong>
               </span>
 
               <i class="fa-solid fa-arrow-up-right-from-square contact-method-arrow"></i>
@@ -2820,13 +2748,8 @@
               </span>
 
               <span class="contact-method-text">
-
                 <small>WhatsApp</small>
-
-                <strong>
-                  Message me directly
-                </strong>
-
+                <strong>Message me directly</strong>
               </span>
 
               <i class="fa-solid fa-arrow-up-right-from-square contact-method-arrow"></i>
@@ -2847,13 +2770,8 @@
               </span>
 
               <span class="contact-method-text">
-
                 <small>Facebook</small>
-
-                <strong>
-                  Visit my profile
-                </strong>
-
+                <strong>Visit my profile</strong>
               </span>
 
               <i class="fa-solid fa-arrow-up-right-from-square contact-method-arrow"></i>
@@ -2869,13 +2787,8 @@
               </span>
 
               <span class="contact-method-text">
-
                 <small>Location</small>
-
-                <strong>
-                  Lalitpur, Nepal
-                </strong>
-
+                <strong>Lalitpur, Nepal</strong>
               </span>
 
             </div>
@@ -2887,13 +2800,8 @@
               <i class="fa-solid fa-file-pdf"></i>
 
               <div>
-
                 <h4>My CV</h4>
-
-                <p>
-                  View my education and background.
-                </p>
-
+                <p>View my education and background.</p>
               </div>
 
               <a
@@ -2933,10 +2841,7 @@
 
                 <div class="form-group">
 
-                  <label
-                    for="name"
-                    data-i18n="formName"
-                  >
+                  <label for="name" data-i18n="formName">
                     Your Name
                   </label>
 
@@ -2958,10 +2863,7 @@
 
                 <div class="form-group">
 
-                  <label
-                    for="email"
-                    data-i18n="formEmail"
-                  >
+                  <label for="email" data-i18n="formEmail">
                     Your Email
                   </label>
 
@@ -2984,10 +2886,7 @@
 
               <div class="form-group">
 
-                <label
-                  for="subject"
-                  data-i18n="formSubject"
-                >
+                <label for="subject" data-i18n="formSubject">
                   Subject
                 </label>
 
@@ -3008,10 +2907,7 @@
 
               <div class="form-group">
 
-                <label
-                  for="message"
-                  data-i18n="formMessage"
-                >
+                <label for="message" data-i18n="formMessage">
                   Message
                 </label>
 
@@ -3038,13 +2934,10 @@
                 type="submit"
                 class="btn btn-primary submit-button"
               >
-
                 <span data-i18n="sendMessage">
                   Send Message
                 </span>
-
                 <i class="fa-solid fa-paper-plane"></i>
-
               </button>
 
               <p
@@ -3136,32 +3029,19 @@
       <div class="footer-bottom">
 
         <p>
-
           &copy;
-
-          <span id="currentYear">
-            2026
-          </span>
-
+          <span id="currentYear">2026</span>
           Sajan Khadka.
-
           <span data-i18n="footerCopyright">
             All rights reserved.
           </span>
-
         </p>
 
-        <a
-          href="#home"
-          class="footer-top-link"
-        >
-
+        <a href="#home" class="footer-top-link">
           <span data-i18n="backToTop">
             Back to Top
           </span>
-
           <i class="fa-solid fa-arrow-up"></i>
-
         </a>
 
       </div>
@@ -3230,9 +3110,7 @@
 
   </div>
 
-  <!-- =========================================================
-       BACK TO TOP BUTTON
-  ========================================================== -->
+  <!-- BACK TO TOP BUTTON -->
 
   <button
     class="back-to-top"
