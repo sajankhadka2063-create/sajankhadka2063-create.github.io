@@ -2,7 +2,7 @@
 /* ============================================================
    SAJAN KHADKA — PORTFOLIO TRANSLATIONS
    File: translations.js
-   Version: 4.0
+   Version: 5.0
 
    Languages:
    - English (en)
@@ -11,7 +11,7 @@
    Covers:
    Navigation, Hero, About, Skills, Projects,
    Designs, Education, CV, Services, Journey,
-   Reviews, Contact, Footer and Status Messages.
+   Reviews, Review Form, Contact, Footer and Status Messages.
 
    Compatible with:
    - script.js Version 4.0
@@ -75,6 +75,7 @@ const translations = {
 
         aboutLabel: "01 / INTRODUCTION",
         aboutHeading: "About Me",
+
         aboutSubtitle:
             "A learner, creator and future developer.",
 
@@ -97,14 +98,17 @@ const translations = {
         infoGoalValue: "Full-Stack Developer",
 
         interestAI: "AI & Technology",
+
         interestAIDesc:
             "Exploring intelligent applications and modern technologies.",
 
         interestEdtech: "Educational Technology",
+
         interestEdtechDesc:
             "Interested in tools that make learning more accessible.",
 
         interestProductivity: "Productivity",
+
         interestProductivityDesc:
             "Creating ideas for better organization and personal growth.",
 
@@ -142,20 +146,14 @@ const translations = {
         projectsHeading: "Featured Projects",
 
         projectsSubtitle:
-            "Concepts and ongoing work from my development journey.",
+            "Explore my web development projects and digital solutions.",
 
-        projectStatus: "Concept / In Development",
+        projectStatus: "Available",
         demoPending: "Demo coming later",
         viewProject: "View Project",
 
-        omsaDescription:
-            "A personal AI assistant concept exploring intelligent assistance, productivity features, voice interaction and user-authorized device actions.",
-
-        examDescription:
-            "An educational platform concept for Lok Sewa and banking exam preparation, with planned notes, quizzes, progress tracking and AI support.",
-
-        dashboardDescription:
-            "A personal organization application concept exploring task management, goals, schedules, progress tracking and productivity statistics.",
+        smartCalculatorDescription:
+            "A responsive calculator featuring standard and scientific calculations, calculation history, and multiple unit converters.",
 
         /* GRAPHIC DESIGN GALLERY */
 
@@ -247,50 +245,62 @@ const translations = {
             "Creative design services and web development skills I am developing.",
 
         service1: "Portfolio Websites",
+
         service1Desc:
             "Personal websites that present professional skills and projects.",
 
         service2: "Responsive Web Design",
+
         service2Desc:
             "Layouts designed for desktop, tablet and mobile devices.",
 
         service3: "Landing Pages",
+
         service3Desc:
             "Focused web pages for products, services and personal brands.",
 
         service4: "Frontend Development",
+
         service4Desc:
             "Interactive website interfaces using modern web technologies.",
 
         service5: "Website Customization",
+
         service5Desc:
             "Improving layouts, styling and basic website functionality.",
 
         service6: "Educational Web Apps",
+
         service6Desc:
             "Exploring practical applications for learning and productivity.",
 
         service7: "Social Media Graphic Design",
+
         service7Desc:
             "Creative promotional posts and advertisements for social media.",
 
         service8: "YouTube Thumbnail Design",
+
         service8Desc:
             "Eye-catching thumbnails for YouTube videos.",
 
         service9: "Posters & Flyers",
+
         service9Desc:
             "Promotional posters, business offers and event flyers.",
 
         service10: "Logo & Branding Concepts",
+
         service10Desc:
             "Creative logo ideas and visual branding concepts.",
 
         service11: "Festival & Invitation Designs",
+
         service11Desc:
             "Festival greetings, invitations and celebration graphics.",
 
         service12: "Restaurant Menu Design",
+
         service12Desc:
             "Restaurant menus and food promotion designs.",
 
@@ -328,13 +338,10 @@ const translations = {
 
         reviewContactButton: "Start a Project",
 
-        
-        
-/* REVIEW FORM — ENGLISH */
+        /* REVIEW FORM — ENGLISH */
 
-        /* REVIEW FORM */
-en: {
         reviewFormHeading: "Share Your Experience",
+
         reviewFormDescription:
             "Have you worked with me? Share your honest feedback below. Your review will appear after approval.",
 
@@ -374,43 +381,6 @@ en: {
 
         reviewValidationError:
             "Please enter valid review details.",
-    },
-/* REVIEW FORM — NEPALI */
-/* यो भाग ne: {} भित्र राख्नुहोस् */
-
-ne: {
-
-    
-    reviewFormHeading: "आफ्नो अनुभव साझा गर्नुहोस्",
-reviewFormDescription:
-    "तपाईंले मसँग काम गर्नुभएको छ? आफ्नो वास्तविक अनुभव र प्रतिक्रिया लेख्नुहोस्। स्वीकृत भएपछि मात्र समीक्षा वेबसाइटमा देखिनेछ।",
-reviewNameLabel: "तपाईंको नाम *",
-reviewNamePlaceholder: "आफ्नो नाम लेख्नुहोस्",
-reviewServiceLabel: "लिनुभएको सेवा *",
-reviewServicePlaceholder: "सेवा छान्नुहोस्",
-reviewServiceLogo: "लोगो डिजाइन",
-reviewServiceSocial: "सामाजिक सञ्जाल डिजाइन",
-reviewServicePoster: "पोस्टर डिजाइन",
-reviewServiceBusinessCard: "बिजनेस कार्ड डिजाइन",
-reviewServiceThumbnail: "YouTube थम्बनेल",
-reviewServiceWeb: "वेब डेभलपमेन्ट",
-reviewServiceOther: "अन्य डिजाइन सेवा",
-reviewRatingLabel: "तपाईंको मूल्याङ्कन *",
-reviewRatingPlaceholder: "मूल्याङ्कन छान्नुहोस्",
-reviewRatingExcellent: "उत्कृष्ट",
-reviewRatingVeryGood: "धेरै राम्रो",
-reviewRatingGood: "राम्रो",
-reviewRatingFair: "ठीकै",
-reviewRatingPoor: "कमजोर",
-reviewMessageLabel: "तपाईंको प्रतिक्रिया *",
-reviewMessagePlaceholder: "आफ्नो अनुभव लेख्नुहोस्...",
-reviewSubmitButton: "समीक्षा पठाउनुहोस्",
-reviewSubmitting: "समीक्षा पठाउँदै...",
-reviewSuccess:
-    "धन्यवाद! तपाईंको समीक्षा प्राप्त भयो। स्वीकृत भएपछि वेबसाइटमा देखिनेछ।",
-reviewError: "समीक्षा पठाउन सकिएन। कृपया फेरि प्रयास गर्नुहोस्।",
-reviewValidationError: "कृपया सही विवरण भर्नुहोस्।",
-},
 
         /* CONTACT */
 
@@ -561,6 +531,7 @@ reviewValidationError: "कृपया सही विवरण भर्न�
         currentlyLearning: "हाल सिक्दै",
         futureSkills: "भविष्यको सिकाइ योजना",
         completedCourses: "पूरा गरिएका कोर्स तथा तालिम",
+
         completedCoursesTitle:
             "पूरा गरिएका कोर्स तथा तालिम",
 
@@ -585,22 +556,15 @@ reviewValidationError: "कृपया सही विवरण भर्न�
         projectsHeading: "मुख्य परियोजनाहरू",
 
         projectsSubtitle:
-            "मेरो विकास यात्राका अवधारणा र निर्माणाधीन परियोजनाहरू।",
+            "मेरो वेब डेभलपमेन्ट परियोजना र डिजिटल समाधानहरू हेर्नुहोस्।",
 
-        projectStatus:
-            "अवधारणा / विकासको क्रममा",
+        projectStatus: "उपलब्ध",
 
         demoPending: "डेमो पछि उपलब्ध हुनेछ",
         viewProject: "परियोजना हेर्नुहोस्",
 
-        omsaDescription:
-            "बुद्धिमान सहायता, उत्पादकत्व, आवाजमार्फत अन्तरक्रिया र प्रयोगकर्ताको अनुमतिमा उपकरण सञ्चालन गर्ने सुविधाहरूको अवधारणा भएको व्यक्तिगत AI सहायक।",
-
-        examDescription:
-            "लोक सेवा र बैंकिङ परीक्षाको तयारीका लागि अध्ययन सामग्री, प्रश्नोत्तर, प्रगति ट्र्याकिङ र AI सहयोगको योजना भएको शैक्षिक प्लेटफर्म।",
-
-        dashboardDescription:
-            "दैनिक कार्य, लक्ष्य, समयतालिका, प्रगति र उत्पादकत्व तथ्याङ्क व्यवस्थापन गर्ने अनुप्रयोगको अवधारणा।",
+        smartCalculatorDescription:
+            "सामान्य तथा वैज्ञानिक गणना, गणना इतिहास र विभिन्न एकाइ रूपान्तरण सुविधासहितको रेस्पोन्सिभ क्याल्कुलेटर।",
 
         /* GRAPHIC DESIGN GALLERY */
 
@@ -791,6 +755,51 @@ reviewValidationError: "कृपया सही विवरण भर्न�
         reviewContactButton:
             "परियोजना सुरु गर्नुहोस्",
 
+        /* REVIEW FORM — NEPALI */
+
+        reviewFormHeading:
+            "आफ्नो अनुभव साझा गर्नुहोस्",
+
+        reviewFormDescription:
+            "तपाईंले मसँग काम गर्नुभएको छ? आफ्नो वास्तविक अनुभव र प्रतिक्रिया लेख्नुहोस्। स्वीकृत भएपछि मात्र समीक्षा वेबसाइटमा देखिनेछ।",
+
+        reviewNameLabel: "तपाईंको नाम *",
+        reviewNamePlaceholder: "आफ्नो नाम लेख्नुहोस्",
+
+        reviewServiceLabel: "लिनुभएको सेवा *",
+        reviewServicePlaceholder: "सेवा छान्नुहोस्",
+
+        reviewServiceLogo: "लोगो डिजाइन",
+        reviewServiceSocial: "सामाजिक सञ्जाल डिजाइन",
+        reviewServicePoster: "पोस्टर डिजाइन",
+        reviewServiceBusinessCard: "बिजनेस कार्ड डिजाइन",
+        reviewServiceThumbnail: "YouTube थम्बनेल",
+        reviewServiceWeb: "वेब डेभलपमेन्ट",
+        reviewServiceOther: "अन्य डिजाइन सेवा",
+
+        reviewRatingLabel: "तपाईंको मूल्याङ्कन *",
+        reviewRatingPlaceholder: "मूल्याङ्कन छान्नुहोस्",
+        reviewRatingExcellent: "उत्कृष्ट",
+        reviewRatingVeryGood: "धेरै राम्रो",
+        reviewRatingGood: "राम्रो",
+        reviewRatingFair: "ठीकै",
+        reviewRatingPoor: "कमजोर",
+
+        reviewMessageLabel: "तपाईंको प्रतिक्रिया *",
+        reviewMessagePlaceholder: "आफ्नो अनुभव लेख्नुहोस्...",
+
+        reviewSubmitButton: "समीक्षा पठाउनुहोस्",
+        reviewSubmitting: "समीक्षा पठाउँदै...",
+
+        reviewSuccess:
+            "धन्यवाद! तपाईंको समीक्षा प्राप्त भयो। स्वीकृत भएपछि वेबसाइटमा देखिनेछ।",
+
+        reviewError:
+            "समीक्षा पठाउन सकिएन। कृपया फेरि प्रयास गर्नुहोस्।",
+
+        reviewValidationError:
+            "कृपया सही विवरण भर्नुहोस्।",
+
         /* CONTACT */
 
         contactLabel: "०९ / सम्पर्क",
@@ -870,6 +879,7 @@ function getSavedPortfolioLanguage() {
         )
             ? saved
             : "en";
+
     } catch {
         return "en";
     }
@@ -1099,5 +1109,5 @@ console.info(
 );
 
 /* ============================================================
-   END OF TRANSLATIONS.JS
+   END OF TRANSLATIONS.JS — VERSION 5.0
 ============================================================ */

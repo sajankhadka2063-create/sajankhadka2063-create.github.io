@@ -1,4 +1,3 @@
-
 /* ============================================================
    SAJAN KHADKA — COMPLETE PORTFOLIO JAVASCRIPT
    File: script.js

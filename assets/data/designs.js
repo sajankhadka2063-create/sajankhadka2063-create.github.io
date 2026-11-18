@@ -1,4 +1,3 @@
-
 /* ============================================================
    SAJAN KHADKA — GRAPHIC DESIGN PORTFOLIO
    File: assets/data/designs.js
