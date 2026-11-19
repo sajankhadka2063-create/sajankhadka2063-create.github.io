@@ -2010,6 +2010,9 @@ main,
   flex-wrap: wrap;
 
   gap: 8px;
+
+  /* Space between tags and project links */
+  margin-bottom: 20px;
 }
 
 .project-tags span {
@@ -2018,13 +2021,16 @@ main,
   border: 1px solid var(--border);
   border-radius: 7px;
 
-  background:
-    rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.025);
 
   color: var(--muted);
 
   font-size: 0.7rem;
   font-weight: 600;
+}
+
+.project-links {
+  margin-top: 0;
 }
 
 
@@ -5155,13 +5161,7 @@ body.lightbox-open {
     width: 100%;
   }
 }
-.project-tags {
-    margin-bottom: 20px;
-}
 
-.project-links {
-    margin-top: 20px;
-}
 /* ==========================================================
    END OF SAJAN KHADKA PORTFOLIO CSS
 ========================================================== */
