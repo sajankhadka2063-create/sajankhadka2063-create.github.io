@@ -2,7 +2,7 @@
 /* ============================================================
    SAJAN KHADKA — PORTFOLIO TRANSLATIONS
    File: translations.js
-   Version: 5.0
+   Version: 6.1
 
    Languages:
    - English (en)
@@ -10,12 +10,8 @@
 
    Covers:
    Navigation, Hero, About, Skills, Projects,
-   Designs, Education, CV, Services, Journey,
-   Reviews, Review Form, Contact, Footer and Status Messages.
-
-   Compatible with:
-   - script.js Version 4.0
-   - assets/data/designs.js Version 4.0
+   Designs, Education, Certifications, CV,
+   Services, Journey, Reviews, Contact and Footer.
 
    SECURITY:
    All translations are plain text, not HTML.
@@ -155,6 +151,9 @@ const translations = {
         smartCalculatorDescription:
             "A responsive calculator featuring standard and scientific calculations, calculation history, and multiple unit converters.",
 
+        typeProDescription:
+            "An interactive touch typing practice platform designed to improve typing speed, accuracy, and keyboard skills through timed tests, free practice, virtual keyboard guidance, and multiple typing modes.",
+
         /* GRAPHIC DESIGN GALLERY */
 
         designsLabel: "04 / CREATIVE WORK",
@@ -215,11 +214,63 @@ const translations = {
         educationHeading: "My Education",
 
         educationSubtitle:
-            "My academic background and learning journey.",
+            "My academic background, professional certifications and learning journey.",
+
+        /* BACHELOR'S DEGREE */
+
+        bachelorDegree: "Bachelor's Degree",
+        bachelorProgram: "Bachelor of Business Studies (BBS)",
+        bachelorInstitution: "G.P. Koirala Memorial College",
+        bachelorStatus: "Currently Studying",
+
+        /* HIGHER SECONDARY */
 
         higherSecondary: "Higher Secondary Education (+2)",
+        higherSecondaryInstitution: "Brooklyn Academy College",
+
+        /* SECONDARY EDUCATION */
+
         secondary: "Secondary Education (SEE)",
+        secondaryInstitution: "Shree Naulin Secondary School",
+
+        /* PROFESSIONAL CERTIFICATIONS */
+
+        professionalCertification: "Professional Certification",
+
+        hubspotCertificate:
+            "Digital Marketing Certified",
+
+        hubspotProvider:
+            "HubSpot Academy",
+
+        hubspotDescription:
+            "Completed professional training in digital marketing strategy, buyer personas, owned, earned and paid media, content planning and campaign development.",
+
+        certificateIssued: "Issued",
+        certificateValidUntil: "Valid Until",
+        viewCertificate: "View Certificate",
+        verifyCertificate: "Verify Certificate",
+
+        /* PROFESSIONAL TRAINING */
+
+        professionalTraining: "Professional Training",
+
+        msOfficeTraining:
+            "MS Office Package Training",
+
+        msOfficeProvider:
+            "Microsoft Office Applications",
+
+        msOfficeDescription:
+            "Successfully completed a three-month Microsoft Office Package Training course.",
+
+        trainingDuration: "Duration",
+        trainingDurationValue: "3 Months",
+
         educationGPA: "GPA",
+        educationGrade: "Grade",
+        educationCompleted: "Completed",
+        educationInProgress: "Currently Studying",
 
         /* CV */
 
@@ -338,7 +389,7 @@ const translations = {
 
         reviewContactButton: "Start a Project",
 
-        /* REVIEW FORM — ENGLISH */
+        /* REVIEW FORM */
 
         reviewFormHeading: "Share Your Experience",
 
@@ -455,9 +506,7 @@ const translations = {
 
         /* HERO */
 
-        heroBadge:
-            "सिक्दै, डिजाइन गर्दै र निर्माण गर्दै",
-
+        heroBadge: "सिक्दै, डिजाइन गर्दै र निर्माण गर्दै",
         heroGreeting: "नमस्कार, म",
 
         heroDescription:
@@ -559,12 +608,14 @@ const translations = {
             "मेरो वेब डेभलपमेन्ट परियोजना र डिजिटल समाधानहरू हेर्नुहोस्।",
 
         projectStatus: "उपलब्ध",
-
         demoPending: "डेमो पछि उपलब्ध हुनेछ",
         viewProject: "परियोजना हेर्नुहोस्",
 
         smartCalculatorDescription:
             "सामान्य तथा वैज्ञानिक गणना, गणना इतिहास र विभिन्न एकाइ रूपान्तरण सुविधासहितको रेस्पोन्सिभ क्याल्कुलेटर।",
+
+        typeProDescription:
+            "टाइपिङ गति, शुद्धता र किबोर्ड प्रयोग गर्ने सीप सुधार गर्न तयार गरिएको अन्तरक्रियात्मक टाइपिङ अभ्यास प्लेटफर्म। यसमा समय निर्धारण गरिएको टाइपिङ टेस्ट, स्वतन्त्र अभ्यास, भर्चुअल किबोर्ड मार्गदर्शन र विभिन्न टाइपिङ मोडहरू उपलब्ध छन्।",
 
         /* GRAPHIC DESIGN GALLERY */
 
@@ -627,15 +678,63 @@ const translations = {
         educationHeading: "मेरो शिक्षा",
 
         educationSubtitle:
-            "मेरो शैक्षिक पृष्ठभूमि र सिकाइ यात्रा।",
+            "मेरो शैक्षिक पृष्ठभूमि, व्यावसायिक प्रमाणपत्र र सिकाइ यात्रा।",
 
-        higherSecondary:
-            "उच्च माध्यमिक शिक्षा (+२)",
+        /* BACHELOR'S DEGREE */
 
-        secondary:
-            "माध्यमिक शिक्षा (SEE)",
+        bachelorDegree: "स्नातक तह",
+        bachelorProgram: "व्यवसाय अध्ययनमा स्नातक (BBS)",
+        bachelorInstitution: "जी.पी. कोइराला मेमोरियल कलेज",
+        bachelorStatus: "हाल अध्ययनरत",
+
+        /* HIGHER SECONDARY */
+
+        higherSecondary: "उच्च माध्यमिक शिक्षा (+२)",
+        higherSecondaryInstitution: "ब्रुकलिन एकेडेमी कलेज",
+
+        /* SECONDARY EDUCATION */
+
+        secondary: "माध्यमिक शिक्षा (SEE)",
+        secondaryInstitution: "श्री नाउलिन माध्यमिक विद्यालय",
+
+        /* PROFESSIONAL CERTIFICATIONS */
+
+        professionalCertification: "व्यावसायिक प्रमाणपत्र",
+
+        hubspotCertificate:
+            "डिजिटल मार्केटिङ प्रमाणित",
+
+        hubspotProvider:
+            "HubSpot Academy",
+
+        hubspotDescription:
+            "डिजिटल मार्केटिङ रणनीति, ग्राहक समूह पहिचान, Owned, Earned र Paid Media, सामग्री योजना तथा अभियान विकाससम्बन्धी व्यावसायिक तालिम पूरा गरेको।",
+
+        certificateIssued: "जारी मिति",
+        certificateValidUntil: "मान्य रहने मिति",
+        viewCertificate: "प्रमाणपत्र हेर्नुहोस्",
+        verifyCertificate: "प्रमाणपत्र प्रमाणित गर्नुहोस्",
+
+        /* PROFESSIONAL TRAINING */
+
+        professionalTraining: "व्यावसायिक तालिम",
+
+        msOfficeTraining:
+            "MS Office प्याकेज तालिम",
+
+        msOfficeProvider:
+            "Microsoft Office Applications",
+
+        msOfficeDescription:
+            "तीन महिनाको Microsoft Office Package Training सफलतापूर्वक पूरा गरेको।",
+
+        trainingDuration: "अवधि",
+        trainingDurationValue: "३ महिना",
 
         educationGPA: "जीपीए",
+        educationGrade: "ग्रेड",
+        educationCompleted: "पूरा भएको",
+        educationInProgress: "हाल अध्ययनरत",
 
         /* CV */
 
@@ -755,7 +854,7 @@ const translations = {
         reviewContactButton:
             "परियोजना सुरु गर्नुहोस्",
 
-        /* REVIEW FORM — NEPALI */
+        /* REVIEW FORM */
 
         reviewFormHeading:
             "आफ्नो अनुभव साझा गर्नुहोस्",
@@ -1109,5 +1208,5 @@ console.info(
 );
 
 /* ============================================================
-   END OF TRANSLATIONS.JS — VERSION 5.0
+   END OF TRANSLATIONS.JS — VERSION 6.1
 ============================================================ */
