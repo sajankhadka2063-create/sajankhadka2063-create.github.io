@@ -2,19 +2,24 @@
 /* ============================================================
    SAJAN KHADKA — PORTFOLIO TRANSLATIONS
    File: translations.js
-   Version: 6.1
+   Version: 6.3
 
    Languages:
    - English (en)
    - Nepali (ne)
 
-   Covers:
+   Sections:
    Navigation, Hero, About, Skills, Projects,
-   Designs, Education, Certifications, CV,
-   Services, Journey, Reviews, Contact and Footer.
+   Graphic Designs, Education, Certifications,
+   CV, Services, Learning Journey, Reviews,
+   Contact and Footer.
 
-   SECURITY:
-   All translations are plain text, not HTML.
+   Updates:
+   - Improved Education & Certifications translations.
+   - Updated HubSpot Academy certification details.
+   - Added missing design category translations.
+   - Preserved existing translation keys and helpers.
+   - Improved language validation and fallback handling.
 ============================================================ */
 
 "use strict";
@@ -49,7 +54,7 @@ const translations = {
         heroGreeting: "Hello, I'm",
 
         heroDescription:
-            "I'm Sajan Khadka, an aspiring Full-Stack Developer and Canva Graphic Designer from Nepal. I enjoy creating useful websites, engaging visual designs and practical digital solutions.",
+            "I'm Sajan Khadka, an aspiring Full-Stack Developer and Canva Graphic Designer from Nepal. I have completed HubSpot Academy's Digital Marketing certification and enjoy creating useful websites, engaging visual designs and practical digital solutions.",
 
         viewProjects: "Explore Projects",
         viewDesigns: "Explore Designs",
@@ -62,6 +67,7 @@ const translations = {
         typingTexts: [
             "Aspiring Full-Stack Developer",
             "Canva Graphic Designer",
+            "Digital Marketing Certified",
             "Web Development Enthusiast",
             "Technology & AI Explorer",
             "Lifelong Learner"
@@ -79,13 +85,13 @@ const translations = {
             "Turning curiosity into real-world skills.",
 
         aboutParagraph1:
-            "I'm Sajan Khadka, an aspiring Full-Stack Developer and Canva Graphic Designer from Nepal with a passion for technology, creativity and problem-solving.",
+            "I'm Sajan Khadka, an aspiring Full-Stack Developer and Canva Graphic Designer from Nepal. I have also completed the Digital Marketing certification from HubSpot Academy, developing foundational knowledge of digital marketing concepts and strategies.",
 
         aboutParagraph2:
-            "I am learning web development while preparing for competitive examinations such as Lok Sewa. I develop my skills through hands-on projects and consistent practice.",
+            "I am learning web development while preparing for competitive examinations such as Lok Sewa. I develop my skills through hands-on projects, professional training and consistent practice.",
 
         aboutParagraph3:
-            "My interests include AI-powered applications, educational technology, productivity tools and graphic design. I believe in discipline, consistency and lifelong learning.",
+            "My interests include AI-powered applications, educational technology, productivity tools, digital marketing and graphic design. I believe in discipline, consistency and lifelong learning.",
 
         infoName: "Name",
         infoLocation: "Location",
@@ -211,10 +217,10 @@ const translations = {
         /* EDUCATION */
 
         educationLabel: "05 / ACADEMICS",
-        educationHeading: "My Education",
+        educationHeading: "Education & Certifications",
 
         educationSubtitle:
-            "My academic background, professional certifications and learning journey.",
+            "My academic background, professional certifications, training and learning journey.",
 
         /* BACHELOR'S DEGREE */
 
@@ -244,7 +250,7 @@ const translations = {
             "HubSpot Academy",
 
         hubspotDescription:
-            "Completed professional training in digital marketing strategy, buyer personas, owned, earned and paid media, content planning and campaign development.",
+            "Completed HubSpot Academy's Digital Marketing Certification, covering digital marketing strategy, buyer personas, content planning, SEO, social media, advertising and campaign measurement.",
 
         certificateIssued: "Issued",
         certificateValidUntil: "Valid Until",
@@ -510,7 +516,7 @@ const translations = {
         heroGreeting: "नमस्कार, म",
 
         heroDescription:
-            "म सजन खड्का हुँ। म नेपालबाट फुल-स्ट्याक डेभलपर बन्ने लक्ष्य राखेको विद्यार्थी तथा Canva ग्राफिक डिजाइनर हुँ। उपयोगी वेबसाइट, आकर्षक डिजाइन र व्यावहारिक डिजिटल समाधान निर्माण गर्न रुचि राख्छु।",
+            "म सजन खड्का हुँ। म नेपालबाट फुल-स्ट्याक डेभलपर बन्ने लक्ष्य राखेको विद्यार्थी तथा Canva ग्राफिक डिजाइनर हुँ। मैले HubSpot Academy को Digital Marketing Certification पूरा गरेको छु। उपयोगी वेबसाइट, आकर्षक डिजाइन र व्यावहारिक डिजिटल समाधान निर्माण गर्न रुचि राख्छु।",
 
         viewProjects: "परियोजनाहरू हेर्नुहोस्",
         viewDesigns: "डिजाइनहरू हेर्नुहोस्",
@@ -523,6 +529,7 @@ const translations = {
         typingTexts: [
             "फुल-स्ट्याक डेभलपर बन्ने लक्ष्य",
             "Canva ग्राफिक डिजाइनर",
+            "Digital Marketing Certified",
             "वेब डेभलपमेन्टमा रुचि",
             "प्रविधि र AI को अध्ययन",
             "निरन्तर सिक्ने विद्यार्थी"
@@ -540,13 +547,13 @@ const translations = {
             "जिज्ञासालाई व्यावहारिक सीपमा बदल्दै।",
 
         aboutParagraph1:
-            "म सजन खड्का हुँ। म नेपालबाट फुल-स्ट्याक डेभलपर बन्ने लक्ष्य राखेको विद्यार्थी तथा Canva ग्राफिक डिजाइनर हुँ। मलाई प्रविधि, सिर्जनशीलता र उपयोगी डिजिटल समाधान निर्माण गर्न रुचि छ।",
+            "म सजन खड्का हुँ। म नेपालबाट फुल-स्ट्याक डेभलपर बन्ने लक्ष्य राखेको विद्यार्थी तथा Canva ग्राफिक डिजाइनर हुँ। मैले HubSpot Academy बाट Digital Marketing Certification पनि पूरा गरेको छु, जसबाट डिजिटल मार्केटिङका आधारभूत अवधारणा र रणनीतिबारे ज्ञान हासिल गरेको छु।",
 
         aboutParagraph2:
-            "म हाल लोक सेवा जस्ता प्रतिस्पर्धात्मक परीक्षाको तयारीसँगै वेब डेभलपमेन्ट र ग्राफिक डिजाइन सिक्दै छु। व्यावहारिक परियोजना र नियमित अभ्यासमार्फत आफ्ना सीपहरू विकास गर्दै छु।",
+            "म हाल लोक सेवा जस्ता प्रतिस्पर्धात्मक परीक्षाको तयारीसँगै वेब डेभलपमेन्ट र ग्राफिक डिजाइन सिक्दै छु। व्यावहारिक परियोजना, व्यावसायिक तालिम र नियमित अभ्यासमार्फत आफ्ना सीपहरू विकास गर्दै छु।",
 
         aboutParagraph3:
-            "मलाई AI आधारित अनुप्रयोग, शैक्षिक प्रविधि, उत्पादकत्वसम्बन्धी उपकरण र ग्राफिक डिजाइनमा रुचि छ। निरन्तरता, अनुशासन र आजीवन सिकाइमा विश्वास गर्छु।",
+            "मलाई AI आधारित अनुप्रयोग, शैक्षिक प्रविधि, उत्पादकत्वसम्बन्धी उपकरण, डिजिटल मार्केटिङ र ग्राफिक डिजाइनमा रुचि छ। निरन्तरता, अनुशासन र आजीवन सिकाइमा विश्वास गर्छु।",
 
         infoName: "नाम",
         infoLocation: "स्थान",
@@ -675,10 +682,10 @@ const translations = {
         /* EDUCATION */
 
         educationLabel: "०५ / शैक्षिक विवरण",
-        educationHeading: "मेरो शिक्षा",
+        educationHeading: "शिक्षा तथा प्रमाणपत्रहरू",
 
         educationSubtitle:
-            "मेरो शैक्षिक पृष्ठभूमि, व्यावसायिक प्रमाणपत्र र सिकाइ यात्रा।",
+            "मेरो शैक्षिक पृष्ठभूमि, व्यावसायिक प्रमाणपत्र, तालिम र सिकाइ यात्रा।",
 
         /* BACHELOR'S DEGREE */
 
@@ -708,7 +715,7 @@ const translations = {
             "HubSpot Academy",
 
         hubspotDescription:
-            "डिजिटल मार्केटिङ रणनीति, ग्राहक समूह पहिचान, Owned, Earned र Paid Media, सामग्री योजना तथा अभियान विकाससम्बन्धी व्यावसायिक तालिम पूरा गरेको।",
+            "HubSpot Academy को Digital Marketing Certification पूरा गरेको। यसमा डिजिटल मार्केटिङ रणनीति, ग्राहक समूह पहिचान, सामग्री योजना, SEO, सामाजिक सञ्जाल, विज्ञापन तथा अभियानको मूल्याङ्कनसम्बन्धी विषयहरू समावेश छन्।",
 
         certificateIssued: "जारी मिति",
         certificateValidUntil: "मान्य रहने मिति",
@@ -967,7 +974,9 @@ const translations = {
 ============================================================ */
 
 function getSavedPortfolioLanguage() {
+
     try {
+
         const saved = localStorage.getItem(
             "sajan-portfolio-language"
         );
@@ -979,7 +988,8 @@ function getSavedPortfolioLanguage() {
             ? saved
             : "en";
 
-    } catch {
+    } catch (error) {
+
         return "en";
     }
 }
@@ -992,6 +1002,7 @@ window.currentLanguage =
 ============================================================ */
 
 function getPortfolioTranslations(language) {
+
     const selectedLanguage =
         language || window.currentLanguage || "en";
 
@@ -1004,6 +1015,7 @@ function getPortfolioTranslations(language) {
 ============================================================ */
 
 function translatePortfolioText(key, language) {
+
     const selectedLanguage =
         language || window.currentLanguage || "en";
 
@@ -1016,6 +1028,7 @@ function translatePortfolioText(key, language) {
             key
         )
     ) {
+
         return dictionary[key];
     }
 
@@ -1025,6 +1038,7 @@ function translatePortfolioText(key, language) {
             key
         )
     ) {
+
         return translations.en[key];
     }
 
@@ -1036,14 +1050,17 @@ function translatePortfolioText(key, language) {
 ============================================================ */
 
 function translateDesignTitle(design, language) {
+
     const selectedLanguage =
         language || window.currentLanguage || "en";
 
     if (!design || typeof design !== "object") {
+
         return "";
     }
 
     if (selectedLanguage === "ne") {
+
         return design.titleNe ||
             design.titleEn ||
             design.title ||
@@ -1056,14 +1073,17 @@ function translateDesignTitle(design, language) {
 }
 
 function translateDesignDescription(design, language) {
+
     const selectedLanguage =
         language || window.currentLanguage || "en";
 
     if (!design || typeof design !== "object") {
+
         return "";
     }
 
     if (selectedLanguage === "ne") {
+
         return design.descriptionNe ||
             design.descriptionEn ||
             design.description ||
@@ -1080,20 +1100,35 @@ function translateDesignDescription(design, language) {
 ============================================================ */
 
 const designCategoryTranslationKeys = {
+
     branding: "designBranding",
     editorial: "designEditorial",
     festivals: "designFestivals",
     invitations: "designInvitations",
     logos: "designLogos",
     "social-media": "designSocialMedia",
-    thumbnails: "designThumbnails"
+    thumbnails: "designThumbnails",
+    restaurant: "designRestaurant",
+    restaurants: "designRestaurant",
+    posters: "designPosters"
+
 };
 
 function translateDesignCategory(category, language) {
+
+    if (!category) {
+
+        return "";
+    }
+
+    const normalizedCategory =
+        String(category).toLowerCase().trim();
+
     const key =
-        designCategoryTranslationKeys[category];
+        designCategoryTranslationKeys[normalizedCategory];
 
     if (!key) {
+
         return category;
     }
 
@@ -1105,12 +1140,14 @@ function translateDesignCategory(category, language) {
 ============================================================ */
 
 function setPortfolioLanguage(language) {
+
     if (
         !Object.prototype.hasOwnProperty.call(
             translations,
             language
         )
     ) {
+
         return false;
     }
 
@@ -1119,12 +1156,16 @@ function setPortfolioLanguage(language) {
     document.documentElement.lang = language;
 
     try {
+
         localStorage.setItem(
             "sajan-portfolio-language",
             language
         );
-    } catch {
+
+    } catch (error) {
+
         // Storage is optional.
+        // Language still works for the current session.
     }
 
     return true;
@@ -1155,28 +1196,65 @@ window.setPortfolioLanguage =
     setPortfolioLanguage;
 
 /* ============================================================
-   09. VALIDATION
+   09. TRANSLATION VALIDATION
 ============================================================ */
 
 function validateTranslations() {
-    const englishKeys = Object.keys(translations.en);
-    const nepaliKeys = Object.keys(translations.ne);
 
-    const missingNepali = englishKeys.filter(
-        key => !Object.prototype.hasOwnProperty.call(
-            translations.ne,
-            key
-        )
-    );
+    const englishKeys =
+        Object.keys(translations.en);
 
-    const missingEnglish = nepaliKeys.filter(
-        key => !Object.prototype.hasOwnProperty.call(
-            translations.en,
-            key
-        )
-    );
+    const nepaliKeys =
+        Object.keys(translations.ne);
+
+    const missingNepali =
+        englishKeys.filter(key => {
+
+            return !Object.prototype.hasOwnProperty.call(
+                translations.ne,
+                key
+            );
+
+        });
+
+    const missingEnglish =
+        nepaliKeys.filter(key => {
+
+            return !Object.prototype.hasOwnProperty.call(
+                translations.en,
+                key
+            );
+
+        });
+
+    const invalidEnglishValues =
+        englishKeys.filter(key => {
+
+            const value = translations.en[key];
+
+            return value === undefined ||
+                value === null;
+
+        });
+
+    const invalidNepaliValues =
+        nepaliKeys.filter(key => {
+
+            const value = translations.ne[key];
+
+            return value === undefined ||
+                value === null;
+
+        });
+
+    const isValid =
+        missingNepali.length === 0 &&
+        missingEnglish.length === 0 &&
+        invalidEnglishValues.length === 0 &&
+        invalidNepaliValues.length === 0;
 
     if (missingNepali.length) {
+
         console.warn(
             "[Translations] Missing Nepali keys:",
             missingNepali
@@ -1184,17 +1262,54 @@ function validateTranslations() {
     }
 
     if (missingEnglish.length) {
+
         console.warn(
             "[Translations] Missing English keys:",
             missingEnglish
         );
     }
 
+    if (invalidEnglishValues.length) {
+
+        console.warn(
+            "[Translations] Invalid English values:",
+            invalidEnglishValues
+        );
+    }
+
+    if (invalidNepaliValues.length) {
+
+        console.warn(
+            "[Translations] Invalid Nepali values:",
+            invalidNepaliValues
+        );
+    }
+
+    if (isValid) {
+
+        console.info(
+            "[Translations] English and Nepali dictionaries are synchronized."
+        );
+
+    } else {
+
+        console.warn(
+            "[Translations] Please review the dictionary warnings."
+        );
+    }
+
     return {
+
         englishKeys: englishKeys.length,
         nepaliKeys: nepaliKeys.length,
+
         missingNepali,
-        missingEnglish
+        missingEnglish,
+
+        invalidEnglishValues,
+        invalidNepaliValues,
+
+        isValid
     };
 }
 
@@ -1202,11 +1317,43 @@ function validateTranslations() {
    10. INITIALIZATION SUMMARY
 ============================================================ */
 
+const portfolioTranslationStatus =
+    validateTranslations();
+
 console.info(
-    "[Sajan Portfolio] Translations loaded.",
-    validateTranslations()
+    "[Sajan Portfolio] Translations loaded successfully.",
+    {
+        version: "6.3",
+        language: window.currentLanguage,
+        englishKeys: portfolioTranslationStatus.englishKeys,
+        nepaliKeys: portfolioTranslationStatus.nepaliKeys,
+        isValid: portfolioTranslationStatus.isValid
+    }
 );
 
 /* ============================================================
-   END OF TRANSLATIONS.JS — VERSION 6.1
+   11. OPTIONAL LANGUAGE ACCESS HELPERS
+============================================================ */
+
+function getCurrentPortfolioLanguage() {
+
+    return window.currentLanguage || "en";
+}
+
+function isPortfolioLanguage(language) {
+
+    return getCurrentPortfolioLanguage() === language;
+}
+
+window.getCurrentPortfolioLanguage =
+    getCurrentPortfolioLanguage;
+
+window.isPortfolioLanguage =
+    isPortfolioLanguage;
+
+window.validatePortfolioTranslations =
+    validateTranslations;
+
+/* ============================================================
+   END OF TRANSLATIONS.JS — VERSION 6.3
 ============================================================ */
